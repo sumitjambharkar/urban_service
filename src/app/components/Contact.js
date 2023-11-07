@@ -45,7 +45,7 @@ const Contact = () => {
             <input type="text" />
         </div>
         
-            <button>Get Started</button>
+            <button className="btn">Get Started</button>
        </form>
       </div>
     </div>
