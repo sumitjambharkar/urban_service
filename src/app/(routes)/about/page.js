@@ -1,11 +1,37 @@
-import Panel from '@/app/components/Panel'
-import React from 'react'
-
+import Image from 'next/image';
 const page = () => {
   return (
-    <div>
-      <Panel name="about"/>
-      <h1>About page</h1>
+    <div className='about'>
+      <Image
+        src="/cleannation.jpg" // Path to your image from the 'public' directory
+        alt="Description of the image"
+        height={200}
+        width={312}
+      />
+      <Image
+        src="/cleannation.jpg" // Path to your image from the 'public' directory
+        alt="Description of the image"
+        height={200}
+        width={312}
+      />
+      <Image
+        src="/cleannation.jpg" // Path to your image from the 'public' directory
+        alt="Description of the image"
+        height={200}
+        width={312}
+      />
+      <Image
+        src="/cleannation.jpg" // Path to your image from the 'public' directory
+        alt="Description of the image"
+        height={200}
+        width={312}
+      />
+      <Image
+        src="/cleannation.jpg" // Path to your image from the 'public' directory
+        alt="Description of the image"
+        height={200}
+        width={312}
+      />
     </div>
   )
 }

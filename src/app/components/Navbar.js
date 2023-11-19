@@ -4,20 +4,12 @@ import React, { useEffect, useState } from "react";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import { Animated } from "react-animated-css";
+import List from "./List";
 
 const Navbar = () => {
 
-  const [show, setShow] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setShow(window.innerWidth < 512);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <section className="navbar">
@@ -27,48 +19,33 @@ const Navbar = () => {
             Clean<span>Nation</span>
           </Link>
         </h1>
-        {show ? (
-          <MenuIcon
-            onClick={() => setShow(false)}
-            className="menu"
-            fontSize="large"
-          />
-        ) : (
-          <CloseIcon
-            onClick={() => setShow(true)}
-            className="menu"
-            fontSize="large"
-          />
-        )}
-      </div>
-      <div className={!show ? "child_link" : "child_link_hide"}>
-        <li>
-          <Link onClick={() => setShow(true)} href="/">
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link onClick={() => setShow(true)} href="/about">
-            About
-          </Link>
-        </li>
-        <li>
-          <Link onClick={() => setShow(true)} href="/service">
-            Service
-          </Link>
-        </li>
-        <li>
-          <Link onClick={() => setShow(true)} href="/contact">
-            Contact
-          </Link>
-        </li>
-        <div className="read">
-          <Link onClick={() => setShow(true)} href="/login" className="btn">
-            Sign Up
-          </Link>
+        <div className="nav_list_pc">
+          <List/>
         </div>
-        {/* <li><Link href="/"><ShoppingCartIcon/></Link></li> */}
+        <div className="nav_list_menu">
+          {isMobileMenuOpen ? (
+                <CloseIcon onClick={() => setMobileMenuOpen(false)} /> 
+              ) : (
+                <MenuIcon onClick={() => setMobileMenuOpen(true)} />
+              )}
+        </div>
       </div>
+      <div className="hide">
+          <Animated
+            animationIn="slideInRight"
+            animationOut="slideOutRight"
+            animationInDuration={1000}
+            animationOutDuration={1000}
+            isVisible={isMobileMenuOpen}
+          >
+            <div
+              onClick={() => setMobileMenuOpen(false)}
+              className={isMobileMenuOpen ? "mobile" : "mobile_m"}
+            >
+              <List />
+            </div>
+          </Animated>
+        </div>
     </section>
   );
 };

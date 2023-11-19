@@ -1,11 +1,8 @@
-import Panel from '@/app/components/Panel'
 import Link from 'next/link'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>
-      <Panel name="login"/>
       <div className='login'>
       <div className='login_form'>
       <form >
@@ -20,7 +17,6 @@ const page = () => {
       </div>
       </div> 
       </div>
-    </div>
   )
 }
 

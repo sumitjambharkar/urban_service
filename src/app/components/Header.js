@@ -12,15 +12,28 @@ const Header = () => {
         <AccessTimeOutlinedIcon />
         <li>Monday-saturday:10am - 8pm </li>
         <EmailOutlinedIcon />
-        <li>cleannation00@gmail.com</li>
+        <li>
+          <a href="mailto:cleannation00@gmail.com">cleannation00@gmail.com</a>
+        </li>
         <CallIcon />
-        <li>+917021595850</li>
+        <li>
+          <a href="tel:+917021595850">+917021595850</a>
+        </li>
       </div>
       <div className="header_child">
-        <FacebookIcon />
-        <InstagramIcon />
-        <LinkedInIcon />
-        <GoogleIcon />
+        <a target="_blank" href="https://www.facebook.com/cleannation00">
+          <FacebookIcon style={{color:"white"}} />
+        </a>
+        <a target="_blank" href="https://www.instagram.com/star_home_interior/">
+          <InstagramIcon style={{color:"white"}}/>
+        </a>
+
+        <a target="_blank" href="https://www.youtube.com/@clean-nation6703">
+          <LinkedInIcon style={{color:"white"}} />
+        </a>
+        <a target="_blank" href="https://www.youtube.com/@clean-nation6703">
+          <GoogleIcon style={{color:"white"}} />
+        </a>
       </div>
     </section>
   );

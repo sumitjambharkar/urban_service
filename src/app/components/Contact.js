@@ -16,12 +16,12 @@ const Contact = () => {
             <div className="box">
                 <CallIcon style={{color:"#f45d01"}}/>
                 <h3>Phone</h3>
-                <span>+917021595850</span>
+                <span><a href="tel:+917021595850">+917021595850</a></span>
             </div>
             <div className="box">
                  <EmailOutlinedIcon style={{color:"#f45d01"}}/>
                  <h3>Email</h3>
-                 <span>cleannation00@gmail.com</span>
+                 <span><a href="mailto:cleannation00@gmail.com">cleannation00@gmail.com</a></span>
             </div>
             <div className="box">
                 <AccessTimeOutlinedIcon style={{color:"#f45d01"}}/>
