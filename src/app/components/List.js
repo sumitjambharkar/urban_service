@@ -11,7 +11,7 @@ const List = () => {
       <li ><Link href="/service">Service</Link></li>
       <div className="read">
           <Link href="/login" className="btn">
-            Sign Up
+        Whatsapp
           </Link>
         </div>
     </ul>

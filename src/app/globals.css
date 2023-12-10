@@ -168,7 +168,7 @@
   justify-content: center;
 }
 .main_box_blue {
-  background-color: #2d7dd2;
+  background-color: orange;
   width: 340px;
   padding: 12px;
   height: 300px;
@@ -181,13 +181,13 @@
   justify-content: center;
 }
 .main_box:hover {
-  background-color: #2d7dd2;
+  background-color: orange;
   color: white;
   width: 340px;
   height: 300px;
 }
 .main_box:hover.circle {
-  background-color: #2d7dd2;
+  background-color: orange;
   color: white;
   width: 340px;
   height: 300px;
@@ -196,14 +196,14 @@
   color: white;
 }
 .main_box:hover .cirecle {
-  color: #2d7dd2;
+  color: orange;
   background-color: #fff;
 }
 .main_box:hover p {
   color: white;
 }
 .cirecle {
-  background-color: #2d7dd2;
+  background-color: orange;
   border-radius: 50%;
   color: white;
   width: 80px;
@@ -308,8 +308,8 @@ h3.hny-title.two {
   font-weight: 700;
   transition: 0.3s ease-in;
   border-radius: 25px;
-  background-color: #2d7dd2;
-  border: 2px solid #2d7dd2;
+  background-color: orange;
+  border: 2px solid orange;
   text-decoration: none;
 }
 .read a.btn:hover {
@@ -356,7 +356,7 @@ h3.hny-title.two {
   text-align: center;
 }
 .features_service:hover {
-  border-color: #2d7dd2;
+  border-color: orange;
   box-shadow: 0 40px 90px 0 rgba(0, 0, 0, 0.12);
   border-bottom-style: solid;
   background: rgba(255, 255, 255, 0.05);
@@ -578,8 +578,8 @@ text-decoration: none;
   cursor: pointer;
 }
 .btn {
-  background: #2d7dd2;
-  border: 1px solid #2d7dd2;
+  background: orange;
+  border: 1px solid orange;
   padding: 12px;
   border-radius: 24px;
   color: white;
