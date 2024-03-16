@@ -765,6 +765,9 @@ text-decoration: none;
 .mobile-support {
   display: none;
 }
+.drawer li a:hover{
+  color: #f45d01;
+}
 
 @media only screen and (max-width: 600px) {
   .navbar {
