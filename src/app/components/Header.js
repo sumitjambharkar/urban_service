@@ -13,7 +13,7 @@ const Header = () => {
         <li>Monday-saturday:10am - 8pm </li>
         <EmailOutlinedIcon />
         <li>
-          <a href="mailto:cleannation00@gmail.com">cleannation00@gmail.com</a>
+          <a href="mailto:support@cleannation.in">support@cleannation.in</a>
         </li>
         <CallIcon />
         <li>

@@ -40,14 +40,10 @@
   flex-wrap: wrap;
   row-gap: 8px;
   position: -webkit-sticky;
+  align-items: center;
   position: sticky;
   top: 0;
   z-index: 3;
-}
-.list {
-  display: flex;
-  align-items: center;
-  column-gap: 14px;
 }
 .child_link_logo {
   display: flex;
@@ -56,9 +52,7 @@
   column-gap: 14px;
   width: 100%;
 }
-.list li {
-  list-style: none;
-}
+
 .child_link_logo h1 {
   margin: 0;
   padding: 0;
@@ -73,22 +67,6 @@
   text-decoration: none;
 }
 .child_link_logo h1 a span {
-  color: #f45d01;
-}
-.list li a {
-  background: none;
-  text-transform: capitalize;
-  font-size: 16px;
-  font-weight: 600;
-  display: block;
-  text-decoration: none;
-  line-height: 26px;
-  padding: 0 15px;
-  color: #141414;
-  opacity: 0.9;
-  transition: 1s all ease;
-}
-.list li a:hover {
   color: #f45d01;
 }
 .slider_one {
@@ -747,4 +725,110 @@ text-decoration: none;
     width:100%;
     border-radius: 12px;
 }
+}
+
+
+
+/* .navbar {
+  display: flex;
+  justify-content: space-around;
+  height: 70px;
+  background-color: #e2f5fb;
+  align-items: center;
+} */
+
+.brand h1 {
+  margin: 0;
+}
+
+.drawer {
+  display: flex;
+    column-gap: 28px;
+    align-items: center;
+    list-style: none;
+}
+
+.drawer li a {
+  background: none;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  text-decoration: none;
+  line-height: 26px;
+  padding: 0 15px;
+  color: #141414;
+  opacity: 0.9;
+  transition: 1s all ease;
+}
+
+.mobile-support {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 24px 0px 24px 0;
+    flex-wrap: wrap;
+    row-gap: 8px;
+    position: -webkit-sticky;
+    align-items: center;
+    top: 0;
+    z-index: 3;
+    height: 70px;
+  }
+  .drawer {
+    height: 100vh;
+    width: 100%;
+    row-gap: 18px;
+    position: fixed;
+    top: 70px;
+    flex-direction: column;
+    display: flex;
+    left: -100%;
+    background-color: black;
+    padding-top:30px;
+    transition: left 0.3s ease;
+    z-index: 2;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  .drawer li a {
+    background: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    text-decoration: none;
+    line-height: 26px;
+    padding: 0 15px;
+    color: white;
+    opacity: 0.9;
+    transition: 1s all ease;
+  }
+  .drawer.open {
+    left: 0;
+  }
+  
+  .mobile-support {
+    display: block;
+  }
+  .hamburger-menu {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  
+  .hamburger-line {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+  }
+  
 }
