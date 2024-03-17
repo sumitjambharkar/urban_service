@@ -69,14 +69,14 @@ const Footer = () => {
         <div className="footer_list">
           <ul>
             <li>
-              Phone : <Link href="tel:9839586879">9323969471</Link>
+              Phone : <Link href="tel:+917021595850">7021595850</Link>
             </li>
             <li>
-              Phone : <Link href="tel:8174068286">8898699498</Link>
+              Phone : <Link href="tel:+919323969471">9323969471</Link>
             </li>
             <li>____________________________</li>
             <li>
-              Ratna Shidhi Building,<br></br> Shiv Lane Versova Andheri (W)<br></br> Mumbai 400058
+              Yari Road, Versova, Andheri (W)<br></br> Mumbai 400061
             </li>
           </ul>
         </div>
