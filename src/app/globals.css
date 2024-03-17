@@ -293,6 +293,7 @@ h3.hny-title.two {
 .read a.btn:hover {
   background-color: #f45d01;
   border: 2px solid #f45d01;
+  color: white;
 }
 .service_page {
   padding: 24px;
