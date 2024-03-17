@@ -28,7 +28,7 @@ function Navbar() {
           <Link onClick={toggleDrawer} href="/">Home</Link>
         </li>
         <li>
-          <Link onClick={toggleDrawer} href="/about">About</Link>
+          <Link onClick={toggleDrawer} href="/">About</Link>
         </li>
         <li>
           <Link onClick={toggleDrawer} href="/contact">Contact</Link>
