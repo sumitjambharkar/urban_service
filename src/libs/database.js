@@ -1,8 +1,8 @@
-import mongoose from "mongoose"
+import mongoose from "mongoose";
 
 const connectDatabase = async () => {
    try {
-    await mongoose.connect("mongodb://localhost:27017/share")
+    await mongoose.connect("mongodb+srv://sumittechdeveloper:sumittechdeveloper@cluster0.zzlhc7i.mongodb.net/cleannation")
     console.log("Database connected");
    } catch (error) {
     console.log("Database not connected");

@@ -1,7 +1,8 @@
 import User from "@/model/User";
 import { NextResponse } from "next/server";
 import Database from "@/libs/database";
-Database()
+import connectDatabase from "@/libs/database";
+Database(connectDatabase)
 
 export async function POST(request) {
   try {

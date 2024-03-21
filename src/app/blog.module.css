@@ -1,0 +1,113 @@
+/* styles.css */;
+.blog_section {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+.blog_container {
+    margin: 0 auto;
+    padding: 5rem 0;
+}
+
+.example {
+    height:auto;
+    width:400px;
+    border-width: 2px;
+    border-color: #E2E8F0; /* Assuming #E2E8F0 is the color for gray-200 */
+    border-radius: 0.75rem; /* Assuming 0.75rem for rounded-lg */
+    overflow: hidden;
+  }
+
+.blog_item {
+    padding: 1rem;
+    width: 100%;
+}
+
+.blog_item img {
+    height: 18rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.blog_item {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    column-gap: 24px;
+    row-gap: 24px;
+    flex-wrap: wrap;
+}
+.blog_content {
+    padding: 1.5rem;
+}
+
+.blog_category {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #718096;
+    margin-bottom: 0.25rem;
+}
+
+.blog_title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #2d3748;
+    margin-bottom: 1rem;
+}
+
+.blog_description {
+    font-size: 1rem;
+    color: #4a5568;
+    margin-bottom: 1rem;
+}
+
+.blog_learn_more {
+    color: #4f46e5;
+    display: inline-flex;
+    align-items: center;
+}
+
+.blog_like_count {
+    color: #718096;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.blog_comment_count {
+    color: #718096;
+    display: inline-flex;
+    align-items: center;
+}
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 8px;
+}
+
+.single {
+    padding:24px;
+    width: 100%;
+}
+
+.single h1 {
+    font-size: 35px;
+    color: #f45d01;
+    font-family: poppins;
+    font-weight:700;
+    margin: 12px 0 12px 0;
+}
+
+.single img {
+    width: 100%;
+}
+
+.single span {
+    font-size: 24px;
+    font-family: math;
+    font-weight:500
+}
+
+.single p {
+    font-size: 18px;
+    color: black;
+}
