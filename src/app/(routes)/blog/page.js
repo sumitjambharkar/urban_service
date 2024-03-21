@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import styles from '../../blog.module.css';
 import axios from 'axios';
 import Link from 'next/link';
+import config from '@/config';
 
 const page = () => {
 
@@ -10,7 +11,7 @@ const page = () => {
 
   const getBlogs = async() => {
     try{
-      const result = await axios.get("http://localhost:3000/api/blog")
+      const result = await axios.get(`${config}/api/blog`)
       setblogs(result.data);
     }catch(err){
 
