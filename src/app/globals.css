@@ -770,6 +770,17 @@ text-decoration: none;
   color: #f45d01;
 }
 
+.tox .tox-statusbar__branding svg {
+  fill: rgba(34,47,62,.8);
+  height: 1.14em;
+  vertical-align: -.28em;
+  width: 3.6em;
+  display: none!important
+}
+input.input-field:focus {
+  outline: none;
+}
+
 @media only screen and (max-width: 600px) {
   .navbar {
     background-color: white;
@@ -875,7 +886,7 @@ text-decoration: none;
 .submit-button {
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
+  background-color: #ffae19;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -883,5 +894,5 @@ text-decoration: none;
 }
 
 .submit-button:hover {
-  background-color: #0056b3;
+  background-color: #f45d01;
 }

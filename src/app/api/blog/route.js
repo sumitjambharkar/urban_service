@@ -14,13 +14,14 @@ cloudinary.config({
 export async function POST(request) {
   try {
     const formData = await request.formData();
-    
-    const name = formData.get('name');
+    console.log(formData);
+    const name = formData.get('name')
+    console.log(name);
     const slug = formData.get('slug');
+    console.log(slug);
     const content = formData.get('content');
     const seoTitle = formData.get('seoTitle');
     const seoDescription = formData.get('seoDescription');
-    const category = formData.get('category');
     const file = formData.get('file');
     
     if (!file) {
@@ -39,12 +40,11 @@ export async function POST(request) {
     // Create new Blog post
     const newPost = new Blog({
       name,
-      slug: slug || slugify(name),
+      slug,
       content,
       seoTitle,
       seoDescription,
       image: uploadResult.secure_url,
-      category
     });
     
     // Save new post

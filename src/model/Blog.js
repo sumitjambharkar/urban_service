@@ -16,9 +16,6 @@ const blogSchema = new Schema({
     seoDescription: {
       type: String,
     },
-    category: {
-        type: String,
-    },
     image : {
       type: String,
     },

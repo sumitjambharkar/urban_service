@@ -34,10 +34,13 @@ function Navbar() {
           <Link onClick={toggleDrawer} href="/blog">Blog</Link>
         </li>
         <li>
-          <Link onClick={toggleDrawer} href="/contact">Contact</Link>
+          <Link onClick={toggleDrawer} href="/blogupload">Add Post</Link>
         </li>
         <li>
           <Link onClick={toggleDrawer} href="/service">Service</Link>
+        </li>
+        <li>
+          <Link onClick={toggleDrawer} href="/contact">Contact Us</Link>
         </li>
         <li>
         <div className="read">

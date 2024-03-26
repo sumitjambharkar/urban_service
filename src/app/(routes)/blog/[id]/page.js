@@ -9,6 +9,7 @@ const page = ({params}) => {
     console.log(params);
 
     const [blog, setBlog] = useState({})
+    console.log(blog);
 
      useEffect(() => {
        getData()
@@ -33,7 +34,11 @@ const page = ({params}) => {
          <img src={blog.image} alt="" />
          <div><span>{blog.category}</span></div>
          <div>
-         <p>{blog.content}</p>
+         <div
+                  dangerouslySetInnerHTML={{
+                    __html:blog.content,
+                  }}
+                ></div>
          </div>
         </div>
         
