@@ -30,13 +30,13 @@ const page = () => {
             <div className="post_image_card">
               <div className="post_image_header">
                 <a
-                  href="https://modafinia.com/what-is-modafine-how-its-work/"
+                  href="/"
                   class="elementskit-entry-thumb"
                 >
                   <img
                     width="100%"
                     decoding="async"
-                    src="https://modafinia.com/wp-content/uploads/2023/04/nootropics-supplement.jpg"
+                    src="https://getcleanact.com.au/wp-content/uploads/2021/10/end-of-lease-pic-1000x667.jpg"
                     alt="What is MODAFINE: How it’s work"
                   />
                 </a>

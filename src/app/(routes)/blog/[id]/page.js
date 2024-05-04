@@ -51,7 +51,7 @@ const page = ({params}) => {
      <div className='row'>
      <div className='col-lg-8 col-md-8 col-sm-12 col-xs-12'>
        <div className='single_post_card'>
-           <img style={{width:"100%",padding:"12px"}} src="https://modafinia.com/wp-content/uploads/2022/07/Buy-Modafinil-2-1024x682.jpg" alt="" />
+           <img style={{width:"100%",padding:"12px"}} src="https://getcleanact.com.au/wp-content/uploads/2021/10/end-of-lease-pic-1000x667.jpg" alt="" />
            <div className='single_details'>
            <h1 className='single_title'>
            What is MODAFINE: How it’s work
