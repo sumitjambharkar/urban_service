@@ -7,7 +7,9 @@ import jwt from "jsonwebtoken"
 connectDatabase()
 
 export async function POST(request) {
+    
     const { email, password } = await request.json();
+    console.log(email,password);
     try {
         const user = await User.findOne({ email: email });
         if (!user) {

@@ -1,9 +1,8 @@
 import User from "@/model/User";
 import {NextResponse,NextRequest} from "next/server";
-import Database from "@/libs/database";
 import connectDatabase from "@/libs/database";
 import { getTokenData } from "@/helpers/getTokenData";
-Database(connectDatabase)
+connectDatabase();
 
 export const dynamic = 'force-dynamic';
 export async function GET (req) {

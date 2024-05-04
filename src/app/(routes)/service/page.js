@@ -1,28 +1,41 @@
 import Link from "next/link";
-import React from "react";
+const arr= [1,2,3,4,5,6.4,3,4,4,4,4,4]
 
 const page = () => {
+
+
   return (
-    <div>
-      <div className="show_service">
-        <div className="single_service">
-          <div className="post_service">
-            <img className="post_image"
-              
-              src="https://p.w3layouts.com/demos_new/template_demo/20-03-2021/cleanfreshly-liberty-demo_Free/1414300734/web/assets/images/ab1.jpg"
-              alt=""
-            />
-          </div>
-          <div className="post_service">
-           <p> SERVICES FOR YOU House Cleaning Well trained technician. A hassle
-            free Service Using Best Quality tools. Money is on safe Hand</p>
-            <div className="read">
-							<Link className="btn mt-4" href="services.html">Read More</Link>
-						</div>
-          </div>
+    <>
+   
+      <div className="blog_section">
+        <div className="blog_row">
+          {arr.map((doc)=>(
+            <div className="post_image_card">
+              <div className="post_image_header">
+                <a
+                  href="https://modafinia.com/what-is-modafine-how-its-work/"
+                  class="elementskit-entry-thumb"
+                >
+                  <img
+                    width="100%"
+                    decoding="async"
+                    src="https://modafinia.com/wp-content/uploads/2023/04/nootropics-supplement.jpg"
+                    alt="What is MODAFINE: How it’s work"
+                  />
+                </a>
+              </div>
+              <div class="post_body ">
+                <Link href="/">
+                  What is MODAFINE: How it’s work{" "}
+                </Link>
+                <p>…</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </div>
+
+    </>
   );
 };
 

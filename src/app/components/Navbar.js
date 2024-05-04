@@ -66,30 +66,32 @@ function Navbar() {
         <li>
           <Link onClick={toggleDrawer} href="/blog">Blog</Link>
         </li>
-        <li>
+        {user?.email?
+        <>
+         <li>
           <Link onClick={toggleDrawer} href="/blog-upload">Add Blog</Link>
         </li>
         <li>
           <Link onClick={toggleDrawer} href="/service-upload">Add Service</Link>
         </li>
+        </>:null}
         <li>
           <Link onClick={toggleDrawer} href="/service">Service</Link>
         </li>
         <li>
           <Link onClick={toggleDrawer} href="/contact">Contact Us</Link>
         </li>
-        <li>
+        {!user?.email?<><li>
         <div className="read">
           <Link onClick={toggleDrawer} href="/login" className="btn">
         Login
           </Link>
         </div>
-        </li>
-        <li><div className="read">
-          <Link onClick={toggleDrawer} href="/login" className="btn">
-        sumit
+        </li></>:<li><div className="read">
+          <Link onClick={logout} href="/login" className="btn">
+           SignOut
           </Link>
-        </div></li>
+        </div></li>}
       </div>
       <ul className='mobile-support'>
         <div style={{cursor:"pointer"}} onClick={toggleDrawer}>

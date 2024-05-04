@@ -1,10 +1,9 @@
 "use client"
 import { useEffect, useState } from 'react';
-import styles from '../../blog.module.css';
 import axios from 'axios';
 import Link from 'next/link';
 import config from '@/config';
-
+const arr= [1,2,3,4,5,6.4,3,4,4,4,4,4]
 const page = () => {
 
   const [blogs, setblogs] = useState([])
@@ -24,40 +23,34 @@ const page = () => {
 
   return (
     <>
-      <section className={styles.blog_section}>
-  <div className={styles.blog_container}>
-    <div className={styles.main}>
-      <div className={styles.blog_item}>
-        {blogs.map((doc)=>(
-          <div key={doc._id} className={styles.example}>
-          <img
-            className={styles.blog_image}
-            src={doc.image}
-            alt="blog"
-           
-          />
-          <div className={styles.blog_content}>
-            <h1 className={styles.blog_title}>{doc.name}</h1>
-            {/* <p className={styles.blog_description}>
-              Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
-              microdosing tousled waistcoat.
-            </p> */}
-            <div className="flex items-center flex-wrap ">
-              <Link href={`/blog/${doc.slug}`} className={styles.blog_learn_more}>
-                Learn More
-               
-              </Link>
+       <div className="blog_section">
+        <h1>Blogs</h1>
+        <div className="blog_row">
+          {arr.map((doc)=>(
+            <div className="post_image_card">
+              <div className="post_image_header">
+                <a
+                  href="https://modafinia.com/what-is-modafine-how-its-work/"
+                  class="elementskit-entry-thumb"
+                >
+                  <img
+                    width="100%"
+                    decoding="async"
+                    src="https://modafinia.com/wp-content/uploads/2023/04/nootropics-supplement.jpg"
+                    alt="What is MODAFINE: How it’s work"
+                  />
+                </a>
+              </div>
+              <div class="post_body ">
+                <Link href="/blog/id">
+                  What is MODAFINE: How it’s work{" "}
+                </Link>
+                <p>…</p>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
-        ))}
-        
-       
       </div>
-      
-    </div>
-  </div>
-</section>
 
     </>
     

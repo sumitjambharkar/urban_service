@@ -49,6 +49,7 @@ const page = () => {
   };
   return (
     <div className="form-container">
+      <h1 style={{textAlign:"center"}}>Add Service</h1>
    <div className='form-group-full'>
    <div className="form-group">
       <input name="name" value={data.name} onChange={handleInputChange} className="input-field" placeholder='Name' type='text'/>

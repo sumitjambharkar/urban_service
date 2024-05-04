@@ -905,3 +905,95 @@ input.input-field:focus {
 .submit-button:hover {
   background-color: #f45d01;
 }
+/* ============================= */
+
+.blog_row {
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.post_image_card {
+  background-color: #ffffff;
+  padding: 9px 9px 9px 9px;
+  margin: 24px 0px 11px 0px;
+  width: 580px;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 9.899px 9.899px 30px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 9.899px 9.899px 30px 0 rgba(0, 0, 0, 0.1);
+}
+.post_image_header {
+  position: relative;
+  margin: 12px;
+}
+.post_image_card a img {
+  transition: all 0.4s ease;
+}
+.post_image_card a img:hover {
+  transition: transform 0.5s ease 0s;
+  background-color: transparent;
+  transform: translate(5px, -30px) rotate(2deg);
+  color: #2676ea;
+}
+.post_body a {
+  font-size: 21px;
+  font-weight: 600;
+  color: black;
+  text-decoration: none;
+}
+.blog_section h1 {
+  text-align: center;
+  margin: 32px 0 20px 0;
+}
+.post_body a:hover {
+  color: #2676ea;
+}
+.single_post {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 42px 12px;
+}
+.single_details {
+  padding: 12px;
+}
+.single_title {
+  font-size: 30px;
+  font-size: 1.975rem;
+  color: #000;
+  font-weight: 600;
+
+}
+.single_details h2 {
+  font-size: 27px;
+  color: #444;
+
+}
+.single_details p {
+
+  font-size: 16px;
+}
+.single_post_card {
+  background-color: #ffffff;
+  padding: 9px 9px 9px 9px;
+  margin: 24px 0px 11px 0px;
+  background-color: #fff;
+  -webkit-box-shadow: 9.899px 9.899px 30px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 9.899px 9.899px 30px 0 rgba(0, 0, 0, 0.1);
+}
+.blog_card {
+  padding: 16px;
+}
+.blog_title {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-size: 22px;
+  font-weight: 600;
+
+}
+.image_hflsbf {
+  position: absolute;
+  width: 550px;
+  margin-top: 60px;
+}

@@ -1,21 +1,16 @@
 "use client"
+import config from '@/config';
 import axios from 'axios';
-import Link from 'next/link'
 import React, { useState } from 'react'
 import Swal from 'sweetalert2';
 
 const page = () => {
-  const [data, setData] = useState({
-   email:"",
-   password:""
-  })
+  const [email, setEmail] = useState("")
+  const [password,setPassword] = useState("")
 
-  const handleChange = (e) => {
-    setData({...data,[e.target.name]:e.target.value})
-  }
   const sendData =async(e)=>{
     e.preventDefault()
-    if (!data.email|| !data.password) {
+    if (!email|| !password) {
       Swal.fire({
         title: `Input Field Required`,
         text: "You clicked the button!",
@@ -23,7 +18,8 @@ const page = () => {
       });
     }else{
       try {
-        const result = await axios.post(`${config}/api/login`,{email:data.email,password:data.password})
+        const result = await axios.post(`${config}/api/login`,{email,password})
+        console.log(result);
         if(result.status===200){
           Swal.fire({
             title: `${result.data.message}`,
@@ -49,8 +45,8 @@ const page = () => {
       <div className='login_form'>
       <form onSubmit={sendData} >
       <h2>Login to your account</h2>
-        <input required name="email" value={data.email} onChange={handleChange} type="text" placeholder='Email' />
-        <input required name="password" value={data.password} onChange={handleChange} type="text" placeholder='password' />
+        <input required  value={email} onChange={(e)=>setEmail(e.target.value)} type="email" placeholder='Email' />
+        <input required  value={password} onChange={(e)=>setPassword(e.target.value)} type="password" placeholder='password' />
         <button className='btn' type='submit'>Login</button>
       </form>
       <div className='login_new'>
