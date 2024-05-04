@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
-import connectDatabase from "@/libs/Database";
 import User from "@/model/User";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken"
+import connectDatabase from "@/libs/database";
 
 connectDatabase()
 
