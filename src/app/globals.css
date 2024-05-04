@@ -3,6 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 .header {
   background: #f45d01;
   color: white;
@@ -480,6 +486,9 @@ body {
     color: #fff;
     height: auto;
     padding-bottom: 24px;
+    bottom: 0;
+
+ 
 }
 .footer_section {
   padding: 24px;

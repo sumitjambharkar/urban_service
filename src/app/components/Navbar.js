@@ -1,12 +1,45 @@
 "use client"
 import Link from "next/link";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import config from "@/config";
+import axios from "axios";
 
 function Navbar() {
 
   const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const [user, setUser] = useState(null)
+
+
+  useEffect(() => {
+    getUserDetails()
+  }, [])
+  
+
+  const getUserDetails = async () => {
+    try {
+      const result = await axios.get(`${config}/api/user`);
+      const userData = result.data.data;
+      console.log(userData);
+      setUser(userData);
+    } catch (error) {
+      console.error("Error fetching user data:", error);
+      // Handle error gracefully, e.g., redirect to login page or display an error message
+    }
+  };
+  
+
+  const logout = async() => {
+    try {
+      await axios.get("/api/logout")
+      window.location.reload()
+    } catch (error) {
+      log
+    }
+  }
+
 
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);
@@ -34,7 +67,10 @@ function Navbar() {
           <Link onClick={toggleDrawer} href="/blog">Blog</Link>
         </li>
         <li>
-          <Link onClick={toggleDrawer} href="/blogupload">Add Post</Link>
+          <Link onClick={toggleDrawer} href="/blog-upload">Add Blog</Link>
+        </li>
+        <li>
+          <Link onClick={toggleDrawer} href="/service-upload">Add Service</Link>
         </li>
         <li>
           <Link onClick={toggleDrawer} href="/service">Service</Link>
@@ -45,10 +81,15 @@ function Navbar() {
         <li>
         <div className="read">
           <Link onClick={toggleDrawer} href="/login" className="btn">
-        Whatsapp
+        Login
           </Link>
         </div>
         </li>
+        <li><div className="read">
+          <Link onClick={toggleDrawer} href="/login" className="btn">
+        sumit
+          </Link>
+        </div></li>
       </div>
       <ul className='mobile-support'>
         <div style={{cursor:"pointer"}} onClick={toggleDrawer}>
