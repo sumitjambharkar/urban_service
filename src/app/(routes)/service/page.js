@@ -1,32 +1,49 @@
-import Link from "next/link";
-const arr= [1,2,3,4,5,6.4,3,4,4,4,4,4]
+"use client"
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import Link from 'next/link';
+import config from '@/config';
 
 const page = () => {
 
+  const [service, setService] = useState([])
+  
+  const getService = async() => {
+    try{
+      const result = await axios.get(`${config}/api/service`)
+      setService(result.data);
+    }catch(err){
+
+    }
+  }
+
+  useEffect(() => {
+    getService()
+  }, [])
 
   return (
     <>
-   
-      <div className="blog_section">
+       <div className="blog_section">
+        <h1>Service</h1>
         <div className="blog_row">
-          {arr.map((doc)=>(
+          {service.map((doc)=>(
             <div className="post_image_card">
               <div className="post_image_header">
                 <a
-                  href="https://getcleanact.com.au/wp-content/uploads/2021/10/end-of-lease-pic-1000x667.jpg"
+                  href="/"
                   class="elementskit-entry-thumb"
                 >
                   <img
                     width="100%"
                     decoding="async"
-                    src="https://getcleanact.com.au/wp-content/uploads/2021/10/end-of-lease-pic-1000x667.jpg"
-                    alt="What is work"
+                    src={doc.image}
+                    alt="What is"
                   />
                 </a>
               </div>
               <div class="post_body ">
-                <Link href="/">
-                Home Cleanning
+                <Link href={`/service/${doc.slug}`}>
+                  {doc.name}
                 </Link>
                 <p>…</p>
               </div>
@@ -36,7 +53,8 @@ const page = () => {
       </div>
 
     </>
-  );
-};
+    
+  )
+}
 
 export default page;

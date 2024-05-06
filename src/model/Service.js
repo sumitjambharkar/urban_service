@@ -5,7 +5,8 @@ const serviceSchema = new Schema({
     image:String,
     seoDescription:String,
     seoTitle: String,
-    slug:String
+    slug:String,
+    service:String
 },{
     timestamps: true,
 })
