@@ -1,36 +1,66 @@
 "use client"
-
 import { useRef, useState } from "react";
 import axios from 'axios';
 import config from "@/config";
 import { Editor } from "@tinymce/tinymce-react";
+import { useRouter } from 'next/navigation'
+import Swal from 'sweetalert2';
 
-const page = () => {
+const Page = () => {
   const editorRef = useRef(null);
+  const router = useRouter()
   const [data, setData] = useState({
     name: "",
     slug: "",
     seoTitle: "",
     seoDescription: "",
   });
-  const [file,setFile] = useState(null)
-  const [content,setContent] = useState("")
+  const [file, setFile] = useState(null);
+  const [content, setContent] = useState("");
+  const [seoTitleError, setSeoTitleError] = useState('');
+  const [seoDescriptionError, setSeoDescriptionError] = useState('');
 
   // Function to handle input changes
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setData(prevData => ({
-      ...prevData,
-      [name]: value,
-      
-      // Auto-generate slug if name is provided
-      ...(name === 'name' && value && { slug: value.toLowerCase().replace(/\s+/g, '-') })
-    }));
-  };
+    
+    // Auto-generate slug if name is 'seoTitle' or 'slug' is provided
+    const generateSlug = (inputValue) => inputValue && inputValue.toLowerCase().replace(/\s+/g, '-');
   
+    setData(prevData => {
+      const newData = {
+        ...prevData,
+        [name]: value
+      };
+  
+      if (name === 'seoTitle') {
+        if (value.length > 59) {
+          setSeoTitleError('Maximum character limit exceeded 59');
+        } else {
+          setSeoTitleError('');
+        }
+      }
+      if (name === 'seoDescription') {
+        if (value.length > 135) {
+          setSeoDescriptionError('Maximum character limit exceeded 135');
+        } else {
+          setSeoDescriptionError('');
+        }
+      }
+
+      if (name === 'seoTitle' && value) {
+        newData.slug = generateSlug(value);
+      } else if (name === 'slug' && value) {
+        newData.slug = generateSlug(value);
+      }
+  
+      return newData;
+    });
+  };
 
   // Function to handle form submission
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent default form submission
   
     const formData = new FormData();
     formData.append('name', data.name);
@@ -41,26 +71,28 @@ const page = () => {
     formData.append('file', file);
 
     try {
-      const result  = await axios.post(`${config}/api/blog`,formData)
-      console.log(result);
+      await axios.post(`${config}/api/blog`, formData);
+      Swal.fire({
+        title: "Good job!",
+        text: "Added Blog!",
+        icon: "success"
+      });
+      router.push("/blog");
     } catch (error) {
       console.log(error);
     }
   };
+
   return (
-    <div className="form-container">
-      <h1 style={{textAlign:"center"}}>Add Blog</h1>
-   <div className='form-group-full'>
-   <div className="form-group">
-      <input name="name" value={data.name} onChange={handleInputChange} className="input-field" placeholder='Name' type='text'/>
-    </div>
-    <div className="form-group">
-      <input name="slug" value={data.slug}  className="input-field" placeholder='Slug' type='text'/>
-    </div>
-   </div>
-    <div className="form-group-full">
-    <div className="form-group">
-      <Editor
+    <div className="blog-container">
+      <div className='form-group-full'>
+        <div className="form-group">
+          <input name="name" value={data.name} onChange={handleInputChange} className="input-field" placeholder='Focus Keyword' type='text'/>
+        </div>
+      </div>
+      <div className="form-group-full">
+        <div className="form-group">
+          <Editor
             apiKey="qo462wysj4yv99by9ki4sbxc7rxjhjecbsq8kqm6vh8ayrk0"
             onInit={(evt, editor) => (editorRef.current = editor)}
             init={{
@@ -99,29 +131,35 @@ const page = () => {
               setContent(value)
             }
           />
+        </div>
+      </div>
+      <div className="form-group-full">
+        <div className="form-group">
+          <input name="seoTitle" maxlength={60} value={data.seoTitle} onChange={handleInputChange} className="input-field" placeholder='SEO Title' type='text'/>
+          <span style={{color:"red"}}>{seoTitleError}</span>
+        </div>
+      </div>
+      <div className="form-group-full">
+        <div className="form-group">
+          <input name="seoDescription"  value={data.seoDescription} onChange={handleInputChange} className="input-field" placeholder='SEO Description' type='text'/>
+          <span style={{color:"red"}}>{seoDescriptionError}</span>
+        </div>
+      </div>
+      <div className="form-group-full">
+        <div className="form-group">
+          <input name="slug" value={data.slug} onChange={handleInputChange} className="input-field" placeholder='Slug' type='text'/>
+        </div>
+      </div>
+      <div className="form-group-full">
+        <div className="form-group">
+          <input onChange={(e)=>setFile(e.target.files[0])} className="file-input" type='file'/>
+        </div>
+        <div className="form-group">
+          <input onClick={handleSubmit} className="submit-button" type='submit' value="Submit"/>
+        </div>
       </div>
     </div>
-    <div className="form-group-full">
-    <div className="form-group">
-      <input name="seoTitle" value={data.seoTitle} onChange={handleInputChange} className="input-field" placeholder='SEO Title' type='text'/>
-    </div>
-    </div>
-    <div className="form-group-full">
-    <div className="form-group">
-      <input  name="seoDescription" value={data.seoDescription} onChange={handleInputChange} className="input-field" placeholder='SEO Description' type='text'/>
-    </div>
-    </div>
-    <div className="form-group-full">
-    <div className="form-group">
-      <input  onChange={(e)=>setFile(e.target.files[0])} className="file-input" type='file'/>
-    </div>
-    <div className="form-group">
-      <input onClick={handleSubmit} className="submit-button" type='submit' value="Submit"/>
-    </div>
-    </div>
-   
-  </div>
   )
 }
 
-export default page
+export default Page;

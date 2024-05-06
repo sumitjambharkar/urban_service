@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 
 const page = ({params}) => {
-    console.log(params);
+    
 
     const [blog, setBlog] = useState({})
     console.log(blog);
@@ -51,20 +51,17 @@ const page = ({params}) => {
      <div className='row'>
      <div className='col-lg-8 col-md-8 col-sm-12 col-xs-12'>
        <div className='single_post_card'>
-           <img style={{width:"100%",padding:"12px"}} src="https://getcleanact.com.au/wp-content/uploads/2021/10/end-of-lease-pic-1000x667.jpg" alt="" />
+           <img style={{width:"100%",padding:"12px"}} src={blog.image} alt="" />
            <div className='single_details'>
-           <h1 className='single_title'>
-           What is MODAFINE: How it’s work
-           </h1>
-           <Link href="/author/finia_20225" style={{textDecoration:"none"}}><p>/ Modafinia / By finia_20225</p></Link>
-           <h2> What is MODAFINE: How it’s work</h2>
-           <p>Modafine is a brain-boosting drug that works like so many other similar nootropics to enhance neural function. The drug is available as smart pills and can be taken to help improve attention, memory, and focus among users. Modafine is the result you get when you blend the potent effects of Modafinil and the effective performance of Armodafinil. Each dose of the medication helps to deliver unstoppable energy and laser-sharp focus. The drug works in the central nervous system to help produce positive energy and motivation to do anything. People who depend on Modafine to work always feel that they can take on anything.</p>
-           <h2> What is MODAFINE: How it’s work</h2>
-           <p>Modafine is a brain-boosting drug that works like so many other similar nootropics to enhance neural function. The drug is available as smart pills and can be taken to help improve attention, memory, and focus among users. Modafine is the result you get when you blend the potent effects of Modafinil and the effective performance of Armodafinil. Each dose of the medication helps to deliver unstoppable energy and laser-sharp focus. The drug works in the central nervous system to help produce positive energy and motivation to do anything. People who depend on Modafine to work always feel that they can take on anything.</p>
-           <h2> What is MODAFINE: How it’s work</h2>
-           <p>Modafine is a brain-boosting drug that works like so many other similar nootropics to enhance neural function. The drug is available as smart pills and can be taken to help improve attention, memory, and focus among users. Modafine is the result you get when you blend the potent effects of Modafinil and the effective performance of Armodafinil. Each dose of the medication helps to deliver unstoppable energy and laser-sharp focus. The drug works in the central nervous system to help produce positive energy and motivation to do anything. People who depend on Modafine to work always feel that they can take on anything.</p>
-           <h2> What is MODAFINE: How it’s work</h2>
-           <p>Modafine is a brain-boosting drug that works like so many other similar nootropics to enhance neural function. The drug is available as smart pills and can be taken to help improve attention, memory, and focus among users. Modafine is the result you get when you blend the potent effects of Modafinil and the effective performance of Armodafinil. Each dose of the medication helps to deliver unstoppable energy and laser-sharp focus. The drug works in the central nervous system to help produce positive energy and motivation to do anything. People who depend on Modafine to work always feel that they can take on anything.</p>
+           
+           <Link href={``} style={{textDecoration:"none"}}><h1 className='single_title'>
+            {blog.name}
+           </h1></Link>
+           <div dangerouslySetInnerHTML={{
+            __html:blog.content,
+          }}>
+
+           </div>
            </div>
        </div>
      </div>

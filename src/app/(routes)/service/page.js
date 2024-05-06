@@ -20,13 +20,13 @@ const page = () => {
                     width="100%"
                     decoding="async"
                     src="https://getcleanact.com.au/wp-content/uploads/2021/10/end-of-lease-pic-1000x667.jpg"
-                    alt="What is MODAFINE: How it’s work"
+                    alt="What is work"
                   />
                 </a>
               </div>
               <div class="post_body ">
                 <Link href="/">
-                  What is MODAFINE: How it’s work{" "}
+                Home Cleanning
                 </Link>
                 <p>…</p>
               </div>
