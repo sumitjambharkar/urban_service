@@ -19,7 +19,7 @@ const sendEmailMailer = async ({ name, number, message, email }) => {
     });
     const mailOption = {
       from: "sumit.techdeveloper@gmail.com",
-      to: "itorbitnation@gmail.com",
+      to: "steynkoli08@gmail.com",
       subject: "CleanNation Company Is A Professional All Service Provide In All Over India With low Cost.The Customer Is The King And We Are The Servant",
       html: `FullName : ${name},Number : ${number},
       Email Id : ${email}, Message : ${message}`,
