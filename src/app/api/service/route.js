@@ -24,7 +24,8 @@ export async function POST(request) {
     const seoTitle = formData.get('seoTitle');
     const seoDescription = formData.get('seoDescription');
     const file = formData.get('file');
-    
+    console.log(content,"content");
+    console.log(service,"service");
     if (!file) {
       return NextResponse.json({ error: 'File is required.' });
     }
@@ -43,7 +44,7 @@ export async function POST(request) {
       name,
       service,
       slug,
-      content,
+      content:content,
       seoTitle,
       seoDescription,
       image: uploadResult.secure_url,

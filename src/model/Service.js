@@ -1,16 +1,34 @@
-import mongoose, {Schema} from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
-const serviceSchema = new Schema({
-    name:String,
-    image:String,
-    seoDescription:String,
-    seoTitle: String,
-    slug:String,
-    service:String
-},{
+const serviceSchema = new Schema(
+  {
+    name: {
+      type: String,
+    },
+    slug: {
+      type: String,
+    },
+    content: {
+      type: String,
+    },
+    seoTitle: {
+      type: String,
+    },
+    seoDescription: {
+      type: String,
+    },
+    image: {
+      type: String,
+    },
+    service: {
+      type: String,
+    },
+  },
+  {
     timestamps: true,
-})
+  }
+);
 
-const Service = mongoose.models.Service || mongoose.model("Service",serviceSchema);
+const Service = mongoose.models.Service || mongoose.model("Service", serviceSchema);
 
-export default Service
+export default Service;
