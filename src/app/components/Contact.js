@@ -5,6 +5,7 @@ import CallIcon from "@mui/icons-material/Call";
 import { useState } from "react";
 import axios from "axios";
 import config from "@/config";
+import Swal from 'sweetalert2';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -31,7 +32,11 @@ const Contact = () => {
         message: formData.message,
         email: formData.email,
       });
-      alert("Enquiry Send Successfully")
+      Swal.fire({
+        title: `Enquiry Send Successfully`,
+        text: "You clicked the button!",
+        icon: "success"
+      });
       setFormData({fullName: "",
       phoneNumber: "",
       email: "",
