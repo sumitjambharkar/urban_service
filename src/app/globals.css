@@ -460,6 +460,13 @@ body {
   list-style: none;
 }
 
+.single_post_card a h1 {
+  padding-left: 14px;
+}
+.blog-actions {
+  display: flex;
+  gap: 30px;
+}
 /*  start single service */
 
 .show_service {

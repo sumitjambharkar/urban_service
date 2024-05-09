@@ -7,7 +7,18 @@ import config from '@/config';
 const page = () => {
 
   const [blogs, setblogs] = useState([])
-  console.log(blogs);
+  const [user, setUser] = useState("")
+  console.log(user);
+
+  useEffect(() => {
+    getUserDetails()
+  }, [])
+  
+  const getUserDetails =async ()=> {
+    const result = await axios.get(`${config}/api/user`)
+    setUser(result.data.data);
+  }
+
   const getBlogs = async() => {
     try{
       const result = await axios.get(`${config}/api/blog`)
@@ -20,6 +31,15 @@ const page = () => {
   useEffect(() => {
     getBlogs()
   }, [])
+
+  const deleteBlog = async(id)=>{
+    try {
+      const result =  await axios.delete(`${config}/api/blog/${id}`)
+      getBlogs()
+    } catch (error) {
+      console.log(error);
+    }
+}
 
   return (
     <>
@@ -47,6 +67,12 @@ const page = () => {
                 </Link>
                 <p>…</p>
               </div>
+              <div className="blog-actions">
+            <Link href={`/blog/${doc.slug}`} className="learn-more">Read More</Link>
+            {user?<Link onClick={()=>deleteBlog(doc._id)} href="#">Delete</Link>
+            :null}
+            {user?<Link href={`/blog-upload/${doc.slug}`} >Edit</Link>:null}
+          </div>
             </div>
           ))}
         </div>

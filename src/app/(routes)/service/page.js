@@ -7,7 +7,18 @@ import config from '@/config';
 const page = () => {
 
   const [service, setService] = useState([])
+  const [user, setUser] = useState("")
+
+  useEffect(() => {
+    getUserDetails()
+  }, [])
   
+  const getUserDetails =async ()=> {
+    const result = await axios.get(`${config}/api/user`)
+    setUser(result.data.data);
+  }
+
+
   const getService = async() => {
     try{
       const result = await axios.get(`${config}/api/service`)
@@ -20,6 +31,15 @@ const page = () => {
   useEffect(() => {
     getService()
   }, [])
+
+  const deleteBlog = async(id)=>{
+    try {
+      const result =  await axios.delete(`${config}/api/service/${id}`)
+      getService()
+    } catch (error) {
+      console.log(error);
+    }
+}
 
   return (
     <>
@@ -47,6 +67,11 @@ const page = () => {
                 </Link>
                 <p>…</p>
               </div>
+              <div className="blog-actions">
+            {user?<Link onClick={()=>deleteBlog(doc._id)} href="#">Delete</Link>
+            :null}
+            {user?<Link href={`/service-upload/${doc.slug}`} >Edit</Link>:null}
+          </div>
             </div>
           ))}
         </div>
