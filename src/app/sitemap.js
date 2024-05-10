@@ -1,9 +1,4 @@
-export default async function sitemap() {
 
-
-    return [
-]
-}
 
 export default async function sitemap() {
     // Fetch blog data from API endpoint
