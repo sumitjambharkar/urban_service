@@ -1,8 +1,7 @@
 
-
 export default async function sitemap() {
     // Fetch blog data from API endpoint
-    const response = await fetch("https://cleannation.in/blog");
+    const response = await fetch("https://cleannation.in/api/blog");
     const blogData = await response.json();
   
     // Map fetched blog data to sitemap format
