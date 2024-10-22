@@ -7,7 +7,7 @@ const Slider = () => {
         <h6>Fast and efficient</h6>
         <h5>Quality service for quality home</h5>
         <div className="read">
-							<Link className="btn mt-4" href="services.html">Get Quote</Link>
+							<Link className="btn mt-4" href="/service">Get Quote</Link>
 				</div>
       </div>
     </div>
