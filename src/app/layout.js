@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { GoogleAnalytics } from '@next/third-parties/google'
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,8 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
 
-      <GoogleAnalytics gaId="G-HPXHH3B1BZ" />
-
+      
       <link rel="icon" href="/favicon.ico" sizes="any" />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6946266621446451" crossorigin="anonymous"></script>
       </head>
