@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
 
-      
+      <meta name="google-site-verification" content="H51ghbt3Cv1komaELnRrkuUxrigBjWq8AQIqmDs_xZ4" />
       <link rel="icon" href="/favicon.ico" sizes="any" />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6946266621446451" crossorigin="anonymous"></script>
       </head>
