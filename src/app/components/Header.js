@@ -10,14 +10,14 @@ const Header = () => {
     <section className="header">
       <div className="header_child">
         <AccessTimeOutlinedIcon />
-        <li>Monday-saturday:10am - 8pm </li>
+        <li>Monday-Sunday:10am - 8pm </li>
         <EmailOutlinedIcon />
         <li>
           <a href="mailto:support@cleannation.in">support@cleannation.in</a>
         </li>
         <CallIcon />
         <li>
-          <a href="tel:+917021595850">+917021595850</a>
+          <a href="tel:+917021595850">7021595850 | 9323969471</a>
         </li>
       </div>
       <div className="header_child">

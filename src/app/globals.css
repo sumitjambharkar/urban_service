@@ -13,7 +13,7 @@ body {
   font-family: cursive;
 }
 .header {
-  background: #f45d01;
+  background: orange;
   color: white;
   display: flex;
   justify-content: space-around;
@@ -330,6 +330,7 @@ h3.hny-title.two {
   padding: 24px;
 }
 .features_service {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   width: 280px;
   padding: 40px 30px;
   -moz-transition: all 0.15s ease;
@@ -342,12 +343,11 @@ h3.hny-title.two {
   border-bottom-color: transparent;
   cursor: pointer;
   text-align: center;
+  transition: transform .2s;
 }
 .features_service:hover {
   border-color: orange;
-  box-shadow: 0 40px 90px 0 rgba(0, 0, 0, 0.12);
-  border-bottom-style: solid;
-  background: rgba(255, 255, 255, 0.05);
+  transform: scale(1.1)
 }
 .features_service h5 {
   margin: 12px;
@@ -700,7 +700,7 @@ text-decoration: none;
 }
 .navbar {
   width: 100%;
-  border-bottom: 4px solid #f45d01;
+  border-bottom: 4px solid orange;
 }
 .hide {
   overflow: hidden;
@@ -1006,4 +1006,96 @@ input.input-field:focus {
   position: absolute;
   width: 550px;
   margin-top: 60px;
+}
+
+
+
+.gallery {
+  column-count: 4;
+  --webkit-column-count: 4;
+  --moz-column-count: 4;
+  gap: 1rem;
+  padding: 4rem;
+}
+
+.image img {
+  height: auto;
+  width: 100%;
+}
+
+/* Responsive-ness for different screen-sizes */
+@media screen and (max-width: 810px) {
+  .gallery {
+    column-count: 3;
+    --webkit-column-count: 3;
+    --moz-column-count: 3;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .gallery {
+    column-count: 2;
+    --webkit-column-count: 2;
+    --moz-column-count: 2;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .gallery {
+    column-count: 1;
+    --webkit-column-count: 1;
+    --moz-column-count: 1;
+  }
+}
+
+
+/* CSS */
+.button-5 {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: orange;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button-5:hover,
+.button-5:focus {
+  background-color: orange;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.button-5:hover {
+  transform: translateY(-1px);
+}
+
+.button-5:active {
+  background-color: orange;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+.btng-v{
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
 }

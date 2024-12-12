@@ -79,6 +79,9 @@ function Navbar() {
           <Link onClick={toggleDrawer} href="/service">Service</Link>
         </li>
         <li>
+          <Link onClick={toggleDrawer} href="/gallery">Gallery</Link>
+        </li>
+        <li>
           <Link onClick={toggleDrawer} href="/contact">Contact Us</Link>
         </li>
         {!user?.email?<><li>

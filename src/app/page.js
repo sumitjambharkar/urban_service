@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <>
     <Slider/>
-    <Main/>
-    <About/>
     <Service/>
+    <About/>
+    <Main/>
     <Contact/>
     </>
   )
