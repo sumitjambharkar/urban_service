@@ -5,7 +5,7 @@ const Slider = () => {
     <div className="slider_one">
       <div className="banner-info-bg">
         <h6>Fast and efficient</h6>
-        <h5>Quality service for quality home</h5>
+        <h5>Trusted Service for Perfect Homes.</h5>
         <div className="read">
 							<Link className="btn mt-4" href="/service">Get Quote</Link>
 				</div>

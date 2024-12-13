@@ -2,7 +2,10 @@ import React from 'react'
 
 const About = () => {
   return (
+   <>
+    <h4 className='servicetitle' >About Us</h4>
     <div className='about'>
+       
       <div className='about_img'>
         <img src="https://p.w3layouts.com/demos_new/template_demo/20-03-2021/cleanfreshly-liberty-demo_Free/1414300734/web/assets/images/ab1.jpg" alt="" />
       </div>
@@ -26,6 +29,7 @@ Everything we do is motivated by our commitment to client satisfaction. We pay a
 					</div>
       </div>
     </div>
+   </>
   )
 }
 

@@ -1,8 +1,8 @@
 import Slider from "./components/Slider";
-import Main from "./components/Main";
 import About from "./components/About";
 import Service from "./components/Service";
 import Contact from "./components/Contact";
+import Gallery from "./components/Gallery";
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
     <Slider/>
     <Service/>
     <About/>
-    <Main/>
+    <Gallery/>
     <Contact/>
     </>
   )

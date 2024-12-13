@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
 
-const Service = () => {
-  
+const page = () => {
+
   return (
 
     <>
@@ -73,4 +73,4 @@ const Service = () => {
   )
 }
 
-export default Service
+export default page

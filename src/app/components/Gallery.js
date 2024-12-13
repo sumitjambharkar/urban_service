@@ -1,9 +1,10 @@
 import Link from "next/link"
 
-const page = () => {
+const Gallery = () => {
   
   return (
     <div>
+      <h4 className='servicetitle' >Our Gallery</h4>
       <div className="btng-v">
       <button class="button-5" role="button"><Link href='gallery'>Images</Link></button>
 
@@ -41,4 +42,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Gallery

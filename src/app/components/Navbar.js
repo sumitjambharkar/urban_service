@@ -71,12 +71,10 @@ function Navbar() {
          <li>
           <Link onClick={toggleDrawer} href="/blog-upload">Add Blog</Link>
         </li>
-        <li>
-          <Link onClick={toggleDrawer} href="/service-upload">Add Service</Link>
-        </li>
+       
         </>:null}
         <li>
-          <Link onClick={toggleDrawer} href="/service">Service</Link>
+          <Link onClick={toggleDrawer} href="/services">Service</Link>
         </li>
         <li>
           <Link onClick={toggleDrawer} href="/gallery">Gallery</Link>
