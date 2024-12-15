@@ -3,107 +3,46 @@ import React from 'react'
 const page = () => {
   return (
     <div>
-      <div class="product-detail">
+          <div class="product-detail">
         <div class="product-images">
           <img
-            src="https://res.cloudinary.com/dclgpfheh/image/upload/v1693899010/New_Project_50_j2bt8j.png"
+            src="https://res.cloudinary.com/dclgpfheh/image/upload/v1734255858/Leonardo_Phoenix_A_vibrant_and_inviting_illustration_of_a_comp_0_nixwkk.jpg"
             alt="Main Product Image"
             class="main-image"
           />
         </div>
         <div class="product-info">
-          <h1>1 Bhk Home Cleaning</h1>
-          <p class="sku">my name is description</p>
-          <p class="price">$7,600.00</p>
+          <h1>
+          Comprehensive Home Painting
+
+</h1>
+          <p class="sku">Our Comprehensive Home Painting Service offers a complete solution for refreshing and transforming your living spaces with professional painting techniques and high-quality materials. Whether you need to refresh a single room or repaint your entire home, we provide services that ensure a clean, beautiful, and long-lasting finish</p>
+          <p class="price">Low Cost</p>
        
           <div class="actions_wrraper">
             <div class="actions">
-              <button class="add-to-cart">Add to Cart</button>
-              <button class="add-to-cart">Add to Cart</button>
+              <button class="add-to-cart">Call Now</button>
+              <button class="add-to-cart">Contact Us</button>
             </div>
           </div>
           <div class="additional-info">
             <p>
-              <strong>Free Shipping on Orders Over $50</strong>
+              <strong>Free Home Visit</strong>
             </p>
             <p>
-              <strong>24/7 Customer Support:</strong> +1-800-123-4567
+              <strong>Contact Support Number :</strong> 9323969471
             </p>
             <p>
-              <strong>1-Year Manufacturer Warranty</strong>
+            <details>
+                <summary>
+                  <strong>We Do </strong>
+                </summary>
+                <p>Home Painting</p>
+   
+              </details>
             </p>
             <p>
-              <strong>Delivery:</strong> 3 - 5 Business Days
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="product-detail">
-        <div class="product-images">
-          <img
-            src="https://res.cloudinary.com/dclgpfheh/image/upload/v1693899010/New_Project_50_j2bt8j.png"
-            alt="Main Product Image"
-            class="main-image"
-          />
-        </div>
-        <div class="product-info">
-          <h1>1 Bhk Home Cleaning</h1>
-          <p class="sku">my name is description</p>
-          <p class="price">$7,600.00</p>
-       
-          <div class="actions_wrraper">
-            <div class="actions">
-              <button class="add-to-cart">Add to Cart</button>
-              <button class="add-to-cart">Add to Cart</button>
-            </div>
-          </div>
-          <div class="additional-info">
-            <p>
-              <strong>Free Shipping on Orders Over $50</strong>
-            </p>
-            <p>
-              <strong>24/7 Customer Support:</strong> +1-800-123-4567
-            </p>
-            <p>
-              <strong>1-Year Manufacturer Warranty</strong>
-            </p>
-            <p>
-              <strong>Delivery:</strong> 3 - 5 Business Days
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="product-detail">
-        <div class="product-images">
-          <img
-            src="https://res.cloudinary.com/dclgpfheh/image/upload/v1693899010/New_Project_50_j2bt8j.png"
-            alt="Main Product Image"
-            class="main-image"
-          />
-        </div>
-        <div class="product-info">
-          <h1>1 Bhk Home Cleaning</h1>
-          <p class="sku">my name is description</p>
-          <p class="price">$7,600.00</p>
-       
-          <div class="actions_wrraper">
-            <div class="actions">
-              <button class="add-to-cart">Add to Cart</button>
-              <button class="add-to-cart">Add to Cart</button>
-            </div>
-          </div>
-          <div class="additional-info">
-            <p>
-              <strong>Free Shipping on Orders Over $50</strong>
-            </p>
-            <p>
-              <strong>24/7 Customer Support:</strong> +1-800-123-4567
-            </p>
-            <p>
-              <strong>1-Year Manufacturer Warranty</strong>
-            </p>
-            <p>
-              <strong>Delivery:</strong> 3 - 5 Business Days
+              <strong>Timing:</strong> 3 - 5 Working Hours
             </p>
           </div>
         </div>

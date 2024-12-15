@@ -3,20 +3,17 @@ import React from 'react'
 const page = () => {
   return (
     <div>
-    <div class="product-detail">
+      <div class="product-detail">
         <div class="product-images">
           <img
-            src="https://res.cloudinary.com/dclgpfheh/image/upload/v1734256280/Leonardo_Phoenix_A_vintageinspired_illustration_of_two_bespect_0_aeeg42.jpg"
+            src="https://res.cloudinary.com/dclgpfheh/image/upload/v1734255517/Leonardo_Phoenix_A_bright_and_airy_city_street_scene_showcasin_0_fiswhd.jpg"
             alt="Main Product Image"
             class="main-image"
           />
         </div>
         <div class="product-info">
-          <h1>
-          Housekeeping & Office Boy Contracts
-
-</h1>
-          <p class="sku">Our Housekeeping & Office Boy Contract Services provide dedicated and reliable staff to manage the day-to-day maintenance of your home or office space. With a focus on cleanliness, organization, and efficient assistance, we ensure that your environment remains pleasant, professional, and stress-free.</p>
+          <h1>Comprehensive Window Cleaning</h1>
+          <p class="sku">Our Comprehensive Window Cleaning Service provides an all-in-one solution to ensure your windows are crystal clear, streak-free, and well-maintained. This service covers every aspect of window cleaning, from the glass surface to frames, grills, and surrounding areas.</p>
           <p class="price">Low Cost</p>
        
           <div class="actions_wrraper">
@@ -37,15 +34,17 @@ const page = () => {
                 <summary>
                   <strong>We Do </strong>
                 </summary>
-                <p>Housekeeping & Office Boy Contracts agents
-                </p>
+                <p>cleaning</p>
    
               </details>
             </p>
-            
+            <p>
+              <strong>Timing:</strong> 3 - 5 Working Hours
+            </p>
           </div>
         </div>
       </div>
+     
     </div>
   )
 }

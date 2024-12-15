@@ -6,34 +6,41 @@ const page = () => {
       <div class="product-detail">
         <div class="product-images">
           <img
-            src="https://res.cloudinary.com/dclgpfheh/image/upload/v1693899010/New_Project_50_j2bt8j.png"
+            src="https://res.cloudinary.com/dclgpfheh/image/upload/v1734098436/New_Project_34_zdm4yl.png"
             alt="Main Product Image"
             class="main-image"
           />
         </div>
         <div class="product-info">
-          <h1>1 Bhk Home Cleaning</h1>
-          <p class="sku">my name is description</p>
-          <p class="price">$7,600.00</p>
+          <h1>Less than 1000 litres</h1>
+          <p class="sku">Less than 1000 litres" typically describes storage containers, tanks, or systems with a volume capacity of under 1000 liters.</p>
+          <p class="price">₹ 800.00</p>
        
           <div class="actions_wrraper">
             <div class="actions">
-              <button class="add-to-cart">Add to Cart</button>
-              <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-cart">Call Now </button>
+            <button class="add-to-cart">Contact Us</button>
             </div>
           </div>
           <div class="additional-info">
             <p>
-              <strong>Free Shipping on Orders Over $50</strong>
+              <strong>Free Home Visit</strong>
             </p>
             <p>
-              <strong>24/7 Customer Support:</strong> +1-800-123-4567
+            <strong>Customer Support Number:</strong> 9323969471
             </p>
             <p>
-              <strong>1-Year Manufacturer Warranty</strong>
+            <details>
+                <summary>
+                  <strong>Terms & Conditions</strong>
+                </summary>
+                <p>
+                 Cleaning
+                </p>
+              </details>
             </p>
             <p>
-              <strong>Delivery:</strong> 3 - 5 Business Days
+            <strong>Timing:</strong> 1 - 4 Working Hours
             </p>
           </div>
         </div>
@@ -41,34 +48,41 @@ const page = () => {
       <div class="product-detail">
         <div class="product-images">
           <img
-            src="https://res.cloudinary.com/dclgpfheh/image/upload/v1693899010/New_Project_50_j2bt8j.png"
+            src="https://res.cloudinary.com/dclgpfheh/image/upload/v1734098436/New_Project_34_zdm4yl.png"
             alt="Main Product Image"
             class="main-image"
           />
         </div>
         <div class="product-info">
-          <h1>1 Bhk Home Cleaning</h1>
-          <p class="sku">my name is description</p>
-          <p class="price">$7,600.00</p>
+          <h1> 1000 To 3000 litres</h1>
+          <p class="sku">Our professional water tank cleaning services for 1000 to 3000-litre tanks involve a comprehensive process to eliminate dirt, sediment, algae, and harmful bacteria, ensuring your water remains fresh and hygienic.</p>
+          <p class="price">₹ 1200.00</p>
        
           <div class="actions_wrraper">
             <div class="actions">
-              <button class="add-to-cart">Add to Cart</button>
-              <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-cart">Call Now </button>
+            <button class="add-to-cart">Contact Us</button>
             </div>
           </div>
           <div class="additional-info">
             <p>
-              <strong>Free Shipping on Orders Over $50</strong>
+              <strong>Free Home Visit</strong>
             </p>
             <p>
-              <strong>24/7 Customer Support:</strong> +1-800-123-4567
+            <strong>Customer Support Number:</strong> 9323969471
             </p>
             <p>
-              <strong>1-Year Manufacturer Warranty</strong>
+            <details>
+                <summary>
+                  <strong>Terms & Conditions</strong>
+                </summary>
+                <p>
+                 Cleaning
+                </p>
+              </details>
             </p>
             <p>
-              <strong>Delivery:</strong> 3 - 5 Business Days
+            <strong>Timing:</strong> 2 - 5 Working Hours
             </p>
           </div>
         </div>
@@ -76,38 +90,47 @@ const page = () => {
       <div class="product-detail">
         <div class="product-images">
           <img
-            src="https://res.cloudinary.com/dclgpfheh/image/upload/v1693899010/New_Project_50_j2bt8j.png"
+            src="https://res.cloudinary.com/dclgpfheh/image/upload/v1734098436/New_Project_34_zdm4yl.png"
             alt="Main Product Image"
             class="main-image"
           />
         </div>
         <div class="product-info">
-          <h1>1 Bhk Home Cleaning</h1>
-          <p class="sku">my name is description</p>
-          <p class="price">$7,600.00</p>
+          <h1>3000 To 5000 litre</h1>
+          <p class="sku">Our professional 3000 to 5000-litre water tank cleaning service is designed to thoroughly clean and disinfect your tanks, removing dirt, sediment, algae, and harmful contaminants.</p>
+          <p class="price">₹ 1,999.00</p>
        
           <div class="actions_wrraper">
             <div class="actions">
-              <button class="add-to-cart">Add to Cart</button>
-              <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-cart">Call Now </button>
+            <button class="add-to-cart">Contact Us</button>
             </div>
           </div>
           <div class="additional-info">
             <p>
-              <strong>Free Shipping on Orders Over $50</strong>
+              <strong>Free Home Visit</strong>
             </p>
             <p>
-              <strong>24/7 Customer Support:</strong> +1-800-123-4567
+            <strong>Customer Support Number:</strong> 9323969471
             </p>
             <p>
-              <strong>1-Year Manufacturer Warranty</strong>
+            <details>
+                <summary>
+                  <strong>Terms & Conditions</strong>
+                </summary>
+                <p>
+                 Cleaning
+                </p>
+              </details>
             </p>
             <p>
-              <strong>Delivery:</strong> 3 - 5 Business Days
+            <strong>Timing:</strong> 2 - 6 Working Hours
             </p>
           </div>
         </div>
       </div>
+     
+    
     </div>
   )
 }

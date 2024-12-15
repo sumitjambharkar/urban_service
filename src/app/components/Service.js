@@ -31,6 +31,13 @@ const Service = () => {
         </div>
         </Link>
         
+        <Link href='window-cleaning'>
+        <div className='features_service'>
+        <img width="64" height="64" src="https://img.icons8.com/?size=100&id=mgvawsY3nFyp&format=png&color=000000" alt="car"/>
+        <h5>Window Cleaning Services</h5>
+        </div>
+        </Link>
+
         <Link href='home-interior'>
         <div className='features_service'>
         <img width="64" height="64" src="https://img.icons8.com/?size=100&id=WG2VAXzjULHJ&format=png&color=000000" alt="house-keeping"/>
@@ -59,12 +66,7 @@ const Service = () => {
         </div>
         </Link>
         
-        <Link href='birthday-decoration'>
-        <div className='features_service'>
-        <img width="64" height="64" src="https://img.icons8.com/?size=100&id=70431&format=png&color=000000" alt="car"/>
-        <h5>Birthday Decoration</h5>
-        </div>
-        </Link>
+      
         
        </div>
     </div>

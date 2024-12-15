@@ -81,6 +81,9 @@ body {
 .child_link_logo h1 a span {
   color: orange;
 }
+.span{
+  color: orange;
+}
 .slider_one {
   background: url("https://res.cloudinary.com/dclgpfheh/image/upload/v1733856748/Leonardo_Phoenix_a_sleek_and_modern_home_interior_with_a_brigh_0_xfw7ag.png")
     no-repeat center;
