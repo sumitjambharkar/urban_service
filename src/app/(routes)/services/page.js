@@ -1,5 +1,11 @@
 import Link from 'next/link'
 import React from 'react'
+export const metadata  = {
+  title:" Services | Sustainable Cleaning Solutions by CleanNation",
+  description:"Explore CleanNation's professional cleaning services, combining eco-friendly techniques and sustainable practices to ensure spotless spaces and a healthier environment. "
+}
+
+
 
 const page = () => {
 

@@ -1,4 +1,8 @@
 import React from 'react'
+export const metadata  = {
+  title:"Gym Trainers | Expert Fitness Coaching by CleanNation",
+  description:"Achieve your fitness goals with CleanNation's certified gym trainers. Our experienced professionals provide personalized workout plans and guidance to help you build strength"
+}
 
 const page = () => {
   return (

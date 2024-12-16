@@ -1,4 +1,8 @@
 import React from 'react'
+export const metadata  = {
+  title:"Chandelier Cleaning Services | Sparkling Results by CleanNation",
+  description:"Restore the brilliance of your chandeliers with CleanNation's expert cleaning services. We use eco-friendly methods to ensure your chandeliers shine like new without harming the environment."
+}
 
 const page = () => {
   return (

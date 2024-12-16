@@ -1,5 +1,10 @@
 import React from 'react'
 
+export const metadata  = {
+  title:"Window Cleaning Services | Streak-Free Shine by CleanNation",
+  description:"Let the light in with CleanNation's professional window cleaning services. We use eco-friendly solutions to deliver crystal-clear"
+}
+
 const page = () => {
   return (
     <div>

@@ -1,4 +1,9 @@
 import React from 'react'
+export const metadata  = {
+  title:"House Painting Services | Fresh & Vibrant Walls by CleanNation",
+  description:"Transform your home with CleanNation's professional house painting services. Our expert team uses eco-friendly paints to bring vibrant"
+}
+
 
 const page = () => {
   return (

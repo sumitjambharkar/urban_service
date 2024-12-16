@@ -1,4 +1,9 @@
 import React from 'react'
+export const metadata  = {
+  title:"Water Tank Cleaning Services | Hygienic Solutions by CleanNation",
+  description:"Ensure clean and safe water with CleanNation's professional water tank cleaning services. Our eco-friendly methods effectively remove contaminants"
+}
+
 
 const page = () => {
   return (

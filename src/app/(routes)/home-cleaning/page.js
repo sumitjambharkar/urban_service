@@ -1,4 +1,9 @@
 import React from "react";
+export const metadata  = {
+  title:"Home Cleaning Services | Eco-Friendly Solutions by CleanNation",
+  description:"Transform your living space with CleanNation's professional home cleaning services. We deliver spotless results using sustainable"
+}
+
 
 const page = () => {
   return (

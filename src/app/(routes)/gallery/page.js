@@ -1,6 +1,13 @@
 import Link from "next/link";
 
+export const metadata  = {
+  title:"Gallery - Inspiring Images of Environmental Transformation",
+  description:"Explore the Clean Nation Gallery, showcasing powerful visuals of environmental action, sustainable initiatives"
+}
+
+
 const page = () => {
+  
   return (
     <div>
       <div className="btng-v">

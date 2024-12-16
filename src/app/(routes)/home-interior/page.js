@@ -1,4 +1,9 @@
 import React from 'react'
+export const metadata  = {
+  title:"Home Interior Services | Pristine Spaces by CleanNation",
+  description:"Elevate your living space with CleanNation's Home Interior Services. From deep cleaning to eco-friendly maintenance, we create spotless"
+}
+
 
 const page = () => {
   return (

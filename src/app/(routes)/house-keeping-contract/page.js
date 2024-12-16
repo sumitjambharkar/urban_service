@@ -1,5 +1,12 @@
 import React from 'react'
 
+export const metadata  = {
+  title:"Housekeeping Contract Services | Professional Solutions by CleanNation",
+  description:"Streamline your cleaning routine with CleanNation's housekeeping contract services. Our tailored solutions offer reliable"
+}
+
+
+
 const page = () => {
   return (
     <div>
