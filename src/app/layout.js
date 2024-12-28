@@ -17,8 +17,22 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
 
+
+
       <meta name="google-site-verification" content="H51ghbt3Cv1komaELnRrkuUxrigBjWq8AQIqmDs_xZ4" />
       <link rel="icon" href="/favicon.ico" sizes="any" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPXHH3B1BZ"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-HPXHH3B1BZ');
+            `,
+          }}
+        />
       </head>
       <body className={inter.className}>
         <Header />

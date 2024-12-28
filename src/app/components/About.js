@@ -24,7 +24,8 @@ const About = () => {
 Everything we do is motivated by our commitment to client satisfaction. We pay attention to our clients, ascertain their needs, and then modify our offerings to meet those needs.
 </p>
 						<div className="read">
-							<a className="btn mt-4" href="services.html">Get Quote</a>
+            <a className="btn mt-4" href="https://api.whatsapp.com/send?phone=7021595850">Get Quote</a>
+							
 						</div>
 					</div>
       </div>

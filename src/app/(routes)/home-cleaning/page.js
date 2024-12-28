@@ -29,8 +29,8 @@ const page = () => {
           <p>3BHK : ₹ 2999 To 3999</p>
           <div class="actions_wrraper">
             <div class="actions">
-              <button class="add-to-cart">Call Now </button>
-              <button class="add-to-cart">Contact Us</button>
+            <button class="add-to-cart"><a href="tel:9323969471">Call Now</a></button>
+            <button class="add-to-cart"><a  href="https://api.whatsapp.com/send?phone=7021595850">Contact Us</a></button>
             </div>
           </div>
           <div class="additional-info">
@@ -80,8 +80,9 @@ const page = () => {
 
           <div class="actions_wrraper">
             <div class="actions">
-              <button class="add-to-cart">Call Now </button>
-              <button class="add-to-cart">Contact Us</button>
+            <button class="add-to-cart"><a href="tel:9323969471">Call Now</a></button>
+            <button class="add-to-cart"><a  href="https://api.whatsapp.com/send?phone=7021595850">Contact Us</a></button>
+           
             </div>
           </div>
           <div class="additional-info">
@@ -128,8 +129,9 @@ const page = () => {
           <p>(including appliance) : ₹ 2,499</p>
           <div class="actions_wrraper">
             <div class="actions">
-              <button class="add-to-cart">Call Now </button>
-              <button class="add-to-cart">Contact Us</button>
+            <button class="add-to-cart"><a href="tel:9323969471">Call Now</a></button>
+            <button class="add-to-cart"><a  href="https://api.whatsapp.com/send?phone=7021595850">Contact Us</a></button>
+           
             </div>
           </div>
           <div class="additional-info">
@@ -178,8 +180,9 @@ const page = () => {
         
           <div class="actions_wrraper">
             <div class="actions">
-              <button class="add-to-cart">Call Now </button>
-              <button class="add-to-cart">Contact Us</button>
+            <button class="add-to-cart"><a href="tel:9323969471">Call Now</a></button>
+            <button class="add-to-cart"><a  href="https://api.whatsapp.com/send?phone=7021595850">Contact Us</a></button>
+           
             </div>
           </div>
           <div class="additional-info">

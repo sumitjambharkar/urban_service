@@ -20,14 +20,13 @@ const page = () => {
           Home Personal Trainer
 
 </h1>
-          <p class="sku">Our Home Personal Trainer Service offers personalized fitness coaching in the comfort of your home. Whether you're aiming to lose weight, build strength, improve flexibility, or boost overall fitness, our certified trainers provide expert guidance, motivation, and support to help you achieve your health goals.</p>
+          <p class="sku">  Home Personal Trainer is a fitness professional who provides personalized workout sessions in the comfort of a client's home. They offer one-on-one guidance, creating customized fitness plans based on the client's goals, fitness level, and any specific needs or limitations.</p>
           <p class="price">Low Cost</p>
        
           <div class="actions_wrraper">
             <div class="actions">
-              <button class="add-to-cart">Call Now</button>
-              <button class="add-to-cart">Contact Us</button>
-            </div>
+            <button class="add-to-cart"><a href="tel:9323969471">Call Now</a></button>
+            <button class="add-to-cart"><a  href="https://api.whatsapp.com/send?phone=7021595850">Contact Us</a></button> </div>
           </div>
           <div class="additional-info">
             <p>
@@ -39,15 +38,26 @@ const page = () => {
             <p>
             <details>
                 <summary>
-                  <strong>We Do </strong>
+                  <strong>Check Details</strong>
                 </summary>
-                <p>Home Personal Trainer Services</p>
+                <p><strong>Near By Andheri West </strong> : (1 Session = ₹399) + (12 Session = ₹4,499)
+                   + ( Monthly Session = ₹5970)  <br />(3 Months Session = ₹18,000)
+                    + (6 Months Session = ₹32,400) + ( 9 Months Session = ₹45,900) 
+                     <br />(Yearly Session =  ₹46,800) <br /> ( Monthly = 3Day Free ) 
+                     ( 3Months = 5Day Free ) ( 6Months = 5Day free ) 
+                     ( 9Months = 8Day Free )<br></br> ( yearly = 8Day Free ) <br /><br />
+
+
+                    <strong>Long Location</strong>  : (1 Session = ₹499) + (12 Session = ₹5,999) 
+                     + ( Monthly Session = ₹6,900)  <br />(3 Months Session = ₹20,700)
+                      + (6 Months Session = ₹34,200) + ( 9 Months Session = ₹48,400) 
+                       <br />(Yearly Session =  ₹50,400) <br /> ( Monthly = 3Day Free ) 
+                       ( 3Months = 5Day Free ) ( 6Months = 5Day free ) 
+                       ( 9Months = 8Day Free )<br></br> ( yearly = 8Day Free )  </p>
    
               </details>
             </p>
-            <p>
-              <strong>Timing:</strong> 3 - 5 Working Hours
-            </p>
+            
           </div>
         </div>
       </div>

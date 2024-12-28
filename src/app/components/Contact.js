@@ -64,7 +64,8 @@ const Contact = () => {
             <CallIcon style={{ color: "#f45d01" }} />
             <h3>Phone</h3>
             <span>
-              <a href="tel:+917021595850">7021595850</a>
+           <a href="tel:9323969471">7021595850</a>
+          
             </span>
           </div>
           <div className="box">

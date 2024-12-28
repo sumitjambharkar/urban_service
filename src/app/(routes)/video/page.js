@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
 export const metadata  = {
-  title:"abcd",
-  description:"abcd"
+  title:"Video Gallery | CleanNation's Environmental Impact and Services",
+  description:"Explore CleanNation's video gallery for informative and inspiring content on our sustainable cleaning services"
 }
 
 
