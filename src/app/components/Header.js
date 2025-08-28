@@ -17,7 +17,7 @@ const Header = () => {
         </li>
         <CallIcon />
         <li>
-          <a href="tel:+917021595850">7021595850 | 9323969471</a>
+          <a href="tel:+919076301717">9076301717 | 9319996195</a>
         </li>
       </div>
       <div className="header_child">

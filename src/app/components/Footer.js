@@ -69,10 +69,10 @@ const Footer = () => {
         <div className="footer_list">
           <ul>
             <li>
-              Phone : <Link href="tel:+917021595850">7021595850</Link>
+              Phone : <Link href="tel:+919076301717">9076301717</Link>
             </li>
             <li>
-              Phone : <Link href="tel:+919323969471">9323969471</Link>
+              Phone : <Link href="tel:+919319996195">9319996195</Link>
             </li>
             <li>____________________________</li>
             <li>
