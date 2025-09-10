@@ -55,16 +55,14 @@ const Contact = () => {
           Services Provider
         </h2>
         <p>
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-          officia sed <br />
-          deserunt mollit anim id est laborum mollit anim id est nulla.
+          We specialize in delivering high-quality cleaning solutions tailored to your needs.
         </p>
         <div className="contact_box">
           <div className="box">
             <CallIcon style={{ color: "#f45d01" }} />
             <h3>Phone</h3>
             <span>
-           <a href="tel:9323969471">7021595850</a>
+           <a href="tel:9076301717">9076301717</a>
           
             </span>
           </div>

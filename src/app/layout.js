@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Best Chandelier Cleaning Services | 9323969471 ✔️",
+  title: "Best Chandelier Cleaning Services | 9076301717 ✔️",
   description: "CleanNation Company Is A Professional All Service Provide In All Over India With low Cost.The Customer Is The King And We Are The Servant",
 };
 

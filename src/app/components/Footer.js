@@ -76,7 +76,7 @@ const Footer = () => {
             </li>
             <li>____________________________</li>
             <li>
-              Yari Road, Versova, Andheri (W)<br></br> Mumbai 400061
+              C 708 crystal plaza apposite infinity mall Andheri West Mumbai Maharashtra
             </li>
           </ul>
         </div>
