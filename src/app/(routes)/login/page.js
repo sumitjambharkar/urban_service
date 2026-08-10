@@ -4,6 +4,8 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import Swal from 'sweetalert2';
 import WbIncandescentIcon from '@mui/icons-material/WbIncandescent';
+import { setAccessToken } from '@/libs/authClient';
+import { loginWrapClass, loginFormWrapClass, loginFormClass, loginInputClass, forgotBtnClass, btnClass } from '@/app/uiClasses';
 
 const page = () => {
   const [email, setEmail] = useState("")
@@ -20,14 +22,15 @@ const page = () => {
     }else{
       try {
         const result = await axios.post(`${config}/api/login`,{email,password})
-        console.log(result);
         if(result.status===200){
+          setAccessToken(result.data.accessToken)
           Swal.fire({
             title: `${result.data.message}`,
             text: "You clicked the button!",
             icon: "success"
           });
-          window.location.reload()
+          const redirect = new URLSearchParams(window.location.search).get('redirect')
+          window.location.href = redirect || '/admin/gallery'
         }
       } catch (error) {
         Swal.fire({
@@ -41,19 +44,19 @@ const page = () => {
   }
 
   return (
-      <div className='login'>
-      <div className='login_form'>
-      <form onSubmit={sendData} >
-      <h2><WbIncandescentIcon style={{color:"var(--gold)", verticalAlign:"middle", marginRight:6}} />Login to your account</h2>
-        <input required  value={email} onChange={(e)=>setEmail(e.target.value)} type="email" placeholder='Email' />
-        <input required  value={password} onChange={(e)=>setPassword(e.target.value)} type="password" placeholder='password' />
-        <button className='btn' type='submit'>Login</button>
+      <div className={loginWrapClass}>
+      <div className={loginFormWrapClass}>
+      <form onSubmit={sendData} className={loginFormClass}>
+      <h2 className="mb-2 text-center text-[26px]"><WbIncandescentIcon className="mr-1.5 align-middle text-gold" />Login to your account</h2>
+        <input required  value={email} onChange={(e)=>setEmail(e.target.value)} type="email" placeholder='Email' className={loginInputClass} />
+        <input required  value={password} onChange={(e)=>setPassword(e.target.value)} type="password" placeholder='password' className={loginInputClass} />
+        <button className={btnClass} type='submit'>Login</button>
       </form>
-      <div className='login_new'>
+      <div className='flex flex-col items-center justify-center'>
       {/* <Link href="/">Create an account</Link> */}
-      <button className='forgot'>forgot Password</button>
+      <button className={forgotBtnClass}>forgot Password</button>
       </div>
-      </div> 
+      </div>
       </div>
   )
 }

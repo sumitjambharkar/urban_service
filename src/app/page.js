@@ -4,6 +4,8 @@ import Service from "./components/Service";
 import Contact from "./components/Contact";
 import Gallery from "./components/Gallery";
 
+export const revalidate = 60;
+
 export default function Home() {
   return (
     <>

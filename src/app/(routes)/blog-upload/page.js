@@ -1,10 +1,17 @@
 "use client"
 import { useRef, useState } from "react";
-import axios from 'axios';
-import config from "@/config";
+import api from '@/libs/api';
 import { Editor } from "@tinymce/tinymce-react";
 import { useRouter } from 'next/navigation'
 import Swal from 'sweetalert2';
+import {
+  blogContainerClass,
+  formGroupFullClass,
+  formGroupBlockClass,
+  inputFieldClass,
+  fileInputClass,
+  submitButtonClass,
+} from '@/app/uiClasses';
 
 const Page = () => {
   const editorRef = useRef(null);
@@ -71,7 +78,7 @@ const Page = () => {
     formData.append('file', file);
 
     try {
-      await axios.post(`${config}/api/blog`, formData);
+      await api.post("/api/blog", formData);
       Swal.fire({
         title: "Good job!",
         text: "Added Blog!",
@@ -84,14 +91,14 @@ const Page = () => {
   };
 
   return (
-    <div className="blog-container">
-      <div className='form-group-full'>
-        <div className="form-group">
-          <input name="name" value={data.name} onChange={handleInputChange} className="input-field" placeholder='Focus Keyword' type='text'/>
+    <div className={blogContainerClass}>
+      <div className={formGroupFullClass}>
+        <div className={formGroupBlockClass}>
+          <input name="name" value={data.name} onChange={handleInputChange} className={inputFieldClass} placeholder='Focus Keyword' type='text'/>
         </div>
       </div>
-      <div className="form-group-full">
-        <div className="form-group">
+      <div className={formGroupFullClass}>
+        <div className={formGroupBlockClass}>
           <Editor
             apiKey="qo462wysj4yv99by9ki4sbxc7rxjhjecbsq8kqm6vh8ayrk0"
             onInit={(evt, editor) => (editorRef.current = editor)}
@@ -133,29 +140,29 @@ const Page = () => {
           />
         </div>
       </div>
-      <div className="form-group-full">
-        <div className="form-group">
-          <input name="seoTitle" maxlength={60} value={data.seoTitle} onChange={handleInputChange} className="input-field" placeholder='SEO Title' type='text'/>
+      <div className={formGroupFullClass}>
+        <div className={formGroupBlockClass}>
+          <input name="seoTitle" maxlength={60} value={data.seoTitle} onChange={handleInputChange} className={inputFieldClass} placeholder='SEO Title' type='text'/>
           <span style={{color:"red"}}>{seoTitleError}</span>
         </div>
       </div>
-      <div className="form-group-full">
-        <div className="form-group">
-          <input name="seoDescription"  value={data.seoDescription} onChange={handleInputChange} className="input-field" placeholder='SEO Description' type='text'/>
+      <div className={formGroupFullClass}>
+        <div className={formGroupBlockClass}>
+          <input name="seoDescription"  value={data.seoDescription} onChange={handleInputChange} className={inputFieldClass} placeholder='SEO Description' type='text'/>
           <span style={{color:"red"}}>{seoDescriptionError}</span>
         </div>
       </div>
-      <div className="form-group-full">
-        <div className="form-group">
-          <input name="slug" value={data.slug} onChange={handleInputChange} className="input-field" placeholder='Slug' type='text'/>
+      <div className={formGroupFullClass}>
+        <div className={formGroupBlockClass}>
+          <input name="slug" value={data.slug} onChange={handleInputChange} className={inputFieldClass} placeholder='Slug' type='text'/>
         </div>
       </div>
-      <div className="form-group-full">
-        <div className="form-group">
-          <input onChange={(e)=>setFile(e.target.files[0])} className="file-input" type='file'/>
+      <div className={formGroupFullClass}>
+        <div className={formGroupBlockClass}>
+          <input onChange={(e)=>setFile(e.target.files[0])} className={fileInputClass} type='file'/>
         </div>
-        <div className="form-group">
-          <input onClick={handleSubmit} className="submit-button" type='submit' value="Submit"/>
+        <div className={formGroupBlockClass}>
+          <input onClick={handleSubmit} className={submitButtonClass} type='submit' value="Submit"/>
         </div>
       </div>
     </div>

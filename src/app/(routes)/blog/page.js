@@ -1,27 +1,40 @@
 "use client"
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import api from '@/libs/api';
 import Link from 'next/link';
-import config from '@/config';
+import {
+  blogSectionClass,
+  blogRowClass,
+  postImageCardClass,
+  postImageHeaderClass,
+  postImageClass,
+  postBodyClass,
+  postBodyLinkClass,
+  blogActionsClass,
+  blogActionLinkClass,
+} from '@/app/uiClasses';
 
 const page = () => {
 
   const [blogs, setblogs] = useState([])
   const [user, setUser] = useState("")
-  console.log(user);
 
   useEffect(() => {
     getUserDetails()
   }, [])
-  
+
   const getUserDetails =async ()=> {
-    const result = await axios.get(`${config}/api/user`)
-    setUser(result.data.data);
+    try {
+      const result = await api.get("/api/user")
+      setUser(result.data.data);
+    } catch (error) {
+      // Not logged in
+    }
   }
 
   const getBlogs = async() => {
     try{
-      const result = await axios.get(`${config}/api/blog`)
+      const result = await api.get("/api/blog")
       setblogs(result.data);
     }catch(err){
 
@@ -34,7 +47,7 @@ const page = () => {
 
   const deleteBlog = async(id)=>{
     try {
-      const result =  await axios.delete(`${config}/api/blog/${id}`)
+      await api.delete(`/api/blog/${id}`)
       getBlogs()
     } catch (error) {
       console.log(error);
@@ -43,12 +56,12 @@ const page = () => {
 
   return (
     <>
-       <div className="blog_section">
-        <h1>Blogs</h1>
-        <div className="blog_row">
+       <div className={blogSectionClass}>
+        <h1 className="mb-9 text-center text-[34px]">Blogs</h1>
+        <div className={blogRowClass}>
           {blogs.map((doc)=>(
-            <div className="post_image_card">
-              <div className="post_image_header">
+            <div className={postImageCardClass}>
+              <div className={postImageHeaderClass}>
                 <a
                   href="/"
                   className="elementskit-entry-thumb"
@@ -58,20 +71,21 @@ const page = () => {
                     decoding="async"
                     src={doc.image}
                     alt="What is"
+                    className={postImageClass}
                   />
                 </a>
               </div>
-              <div className="post_body ">
-                <Link href={`/blog/${doc.slug}`}>
+              <div className={postBodyClass}>
+                <Link href={`/blog/${doc.slug}`} className={postBodyLinkClass}>
                   {doc.name}
                 </Link>
                 <p>…</p>
               </div>
-              <div className="blog-actions">
-            <Link href={`/blog/${doc.slug}`} className="learn-more">Read More</Link>
-            {user?<Link onClick={()=>deleteBlog(doc._id)} href="#">Delete</Link>
+              <div className={blogActionsClass}>
+            <Link href={`/blog/${doc.slug}`} className={blogActionLinkClass}>Read More</Link>
+            {user?<Link onClick={()=>deleteBlog(doc._id)} href="#" className={blogActionLinkClass}>Delete</Link>
             :null}
-            {user?<Link href={`/blog-upload/${doc.slug}`} >Edit</Link>:null}
+            {user?<Link href={`/blog-upload/${doc.slug}`} className={blogActionLinkClass}>Edit</Link>:null}
           </div>
             </div>
           ))}

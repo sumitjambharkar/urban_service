@@ -3,6 +3,12 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import config from '@/config';
 import Link from 'next/link';
+import {
+  singlePostClass,
+  singleDetailsClass,
+  singleTitleClass,
+  singlePostCardClass,
+} from '@/app/uiClasses';
 
 
 const page = ({params}) => {
@@ -26,28 +32,22 @@ const page = ({params}) => {
      
     
   return (
-   <section className='single_post'>
-   <div className='container-fluid'>
-     <div className='row'>
-     <div className='col-lg-8 col-md-8 col-sm-12 col-xs-12'>
-       <div className='single_post_card'>
-       <Link href={``} style={{textDecoration:"none"}}><h1 className='single_title'>
+   <section className={singlePostClass}>
+     <div className={singlePostCardClass}>
+       <Link href={``} style={{textDecoration:"none"}}><h1 className={singleTitleClass}>
             {blog.name}
            </h1></Link>
-           <img style={{width:"100%",padding:"12px"}} src={blog.image} alt="" />
-           <div className='single_details'>
-           
-          
+           <img className="w-full rounded-m p-3" src={blog.image} alt="" />
+           <div className={singleDetailsClass}>
+
+
            <div dangerouslySetInnerHTML={{
             __html:blog.content,
           }}>
 
            </div>
            </div>
-       </div>
      </div>
-     </div>
-   </div>
 </section>
   )
 }

@@ -2,7 +2,11 @@ import mongoose, {Schema} from "mongoose";
 
 const userSchema = new Schema({
     email:String,
-    password:String
+    password:String,
+    refreshToken:{
+        type:String,
+        default:null,
+    }
 },{
     timestamps: true,
 })

@@ -1,10 +1,17 @@
 "use client"
 import { useRef, useState ,useEffect} from "react";
-import axios from 'axios';
-import config from "@/config";
+import api from '@/libs/api';
 import { Editor } from "@tinymce/tinymce-react";
 import { useRouter } from 'next/navigation'
 import Swal from 'sweetalert2'
+import {
+  blogContainerClass,
+  formGroupFullClass,
+  formGroupBlockClass,
+  inputFieldClass,
+  fileInputClass,
+  submitButtonClass,
+} from '@/app/uiClasses';
 
 const Page = ({params}) => {
     const editorRef = useRef(null);
@@ -27,7 +34,7 @@ const Page = ({params}) => {
 
    const getData = async () => {
     try {
-      const result = await axios.get(`${config}/api/service/${params.id}`)
+      const result = await api.get(`/api/service/${params.id}`)
       setData(result.data);
     } catch (error) {
       console.log(error);
@@ -74,7 +81,7 @@ const Page = ({params}) => {
     e.preventDefault();
 
     try {
-      await axios.put(`${config}/api/service/${data._id}`,{name:data.name,slug:data.slug,
+      await api.put(`/api/service/${data._id}`,{name:data.name,slug:data.slug,
         content:data.content,seoTitle:data.seoTitle,seoDescription:data.seoDescription
      });
       Swal.fire({
@@ -89,14 +96,14 @@ const Page = ({params}) => {
   };
 
   return (
-    <div className="blog-container">
-    <div className='form-group-full'>
-      <div className="form-group">
-        <input name="name" value={data.name} onChange={handleInputChange} className="input-field" placeholder='Focus Keyword' type='text'/>
+    <div className={blogContainerClass}>
+    <div className={formGroupFullClass}>
+      <div className={formGroupBlockClass}>
+        <input name="name" value={data.name} onChange={handleInputChange} className={inputFieldClass} placeholder='Focus Keyword' type='text'/>
       </div>
     </div>
-    <div className="form-group-full">
-      <div className="form-group">
+    <div className={formGroupFullClass}>
+      <div className={formGroupBlockClass}>
         <Editor
           apiKey="qo462wysj4yv99by9ki4sbxc7rxjhjecbsq8kqm6vh8ayrk0"
           onInit={(evt, editor) => (editorRef.current = editor)}
@@ -136,29 +143,29 @@ const Page = ({params}) => {
         />
       </div>
     </div>
-    <div className="form-group-full">
-      <div className="form-group">
-        <input name="seoTitle" maxLength={60} value={data.seoTitle} onChange={handleInputChange} className="input-field" placeholder='SEO Title' type='text'/>
+    <div className={formGroupFullClass}>
+      <div className={formGroupBlockClass}>
+        <input name="seoTitle" maxLength={60} value={data.seoTitle} onChange={handleInputChange} className={inputFieldClass} placeholder='SEO Title' type='text'/>
         <span style={{color:"red"}}>{seoTitleError}</span>
       </div>
     </div>
-    <div className="form-group-full">
-      <div className="form-group">
-        <input name="seoDescription"  value={data.seoDescription} onChange={handleInputChange} className="input-field" placeholder='SEO Description' type='text'/>
+    <div className={formGroupFullClass}>
+      <div className={formGroupBlockClass}>
+        <input name="seoDescription"  value={data.seoDescription} onChange={handleInputChange} className={inputFieldClass} placeholder='SEO Description' type='text'/>
         <span style={{color:"red"}}>{seoDescriptionError}</span>
       </div>
     </div>
-    <div className="form-group-full">
-      <div className="form-group">
-        <input name="slug" value={data.slug} onChange={handleInputChange} className="input-field" placeholder='Slug' type='text'/>
+    <div className={formGroupFullClass}>
+      <div className={formGroupBlockClass}>
+        <input name="slug" value={data.slug} onChange={handleInputChange} className={inputFieldClass} placeholder='Slug' type='text'/>
       </div>
     </div>
-    <div className="form-group-full">
-      <div className="form-group">
-        <input onChange={(e)=>setFile(e.target.files[0])} className="file-input" type='file'/>
+    <div className={formGroupFullClass}>
+      <div className={formGroupBlockClass}>
+        <input onChange={(e)=>setFile(e.target.files[0])} className={fileInputClass} type='file'/>
       </div>
-      <div className="form-group">
-        <input onClick={handleSubmit} className="submit-button" type='submit' value="Update"/>
+      <div className={formGroupBlockClass}>
+        <input onClick={handleSubmit} className={submitButtonClass} type='submit' value="Update"/>
       </div>
     </div>
   </div>

@@ -1,15 +1,18 @@
 import { NextResponse } from "next/server";
 import User from "@/model/User";
 import bcrypt from "bcryptjs";
-import jwt from "jsonwebtoken"
 import connectDatabase from "@/libs/database";
+import {
+    generateAccessToken,
+    generateRefreshToken,
+    REFRESH_TOKEN_MAX_AGE_SECONDS,
+} from "@/helpers/auth";
 
 connectDatabase()
 
 export async function POST(request) {
-    
+
     const { email, password } = await request.json();
-    console.log(email,password);
     try {
         const user = await User.findOne({ email: email });
         if (!user) {
@@ -19,12 +22,25 @@ export async function POST(request) {
         if (!matchPassword) {
             return NextResponse.json({ message: "Password not matched" }, { status: 401 });
         }
-        const createToken = { id: user._id, email: user.email };
-        const token = await jwt.sign(createToken, "FHFOQFPFGDSGSHEPGOEHCMC", { expiresIn: "1h" });
-        const response = NextResponse.json({ message: "Login Success" }, { status: 200 });
-        response.cookies.set("token", token, { httpOnly: true });
+
+        const payload = { id: user._id, email: user.email };
+        const accessToken = generateAccessToken(payload);
+        const refreshToken = generateRefreshToken(payload);
+
+        user.refreshToken = refreshToken;
+        await user.save();
+
+        const response = NextResponse.json(
+            { message: "Login Success", accessToken },
+            { status: 200 }
+        );
+        response.cookies.set("refreshToken", refreshToken, {
+            httpOnly: true,
+            maxAge: REFRESH_TOKEN_MAX_AGE_SECONDS,
+            path: "/",
+        });
         return response;
     } catch (error) {
-        return NextResponse.json({ message: error }, { status: 500 });
+        return NextResponse.json({ message: error.message }, { status: 500 });
     }
 }

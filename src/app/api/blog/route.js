@@ -2,6 +2,7 @@ import Blog from "@/model/Blog";
 import { NextResponse } from "next/server";
 import connectDatabase from "@/libs/database";
 import slugify from "slugify";
+import { getTokenData } from "@/helpers/auth";
 const cloudinary = require('cloudinary').v2;
 connectDatabase();
 
@@ -12,6 +13,12 @@ cloudinary.config({
 });
 
 export async function POST(request) {
+  try {
+    getTokenData(request);
+  } catch (error) {
+    return NextResponse.json({ error: error.message, code: error.code || "UNAUTHORIZED" }, { status: 401 });
+  }
+
   try {
     const formData = await request.formData();
     console.log(formData);

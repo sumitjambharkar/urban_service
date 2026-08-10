@@ -1,4 +1,17 @@
 import React from 'react'
+import {
+  productDetailClass,
+  productImagesClass,
+  mainImageClass,
+  productInfoClass,
+  productInfoTitleClass,
+  skuClass,
+  priceClass,
+  actionsWrapperClass,
+  actionsRowClass,
+  addToCartClass,
+  additionalInfoClass,
+} from '@/app/uiClasses'
 
 export const metadata  = {
   title:"Housekeeping Contract Services | Professional Solutions by Chandelite",
@@ -10,29 +23,29 @@ export const metadata  = {
 const page = () => {
   return (
     <div>
-    <div className="product-detail">
-        <div className="product-images">
+    <div className={productDetailClass}>
+        <div className={productImagesClass}>
           <img
             src="https://res.cloudinary.com/dclgpfheh/image/upload/v1734256280/Leonardo_Phoenix_A_vintageinspired_illustration_of_two_bespect_0_aeeg42.jpg"
             alt="Main Product Image"
-            className="main-image"
+            className={mainImageClass}
           />
         </div>
-        <div className="product-info">
-          <h1>
+        <div className={productInfoClass}>
+          <h1 className={productInfoTitleClass}>
           Housekeeping & Office Boy Contracts
 
 </h1>
-          <p className="sku">Our Housekeeping & Office Boy Contract Services provide dedicated and reliable staff to manage the day-to-day maintenance of your home or office space. With a focus on cleanliness, organization, and efficient assistance, we ensure that your environment remains pleasant, professional, and stress-free.</p>
-          <p className="price">Low Cost</p>
+          <p className={skuClass}>Our Housekeeping & Office Boy Contract Services provide dedicated and reliable staff to manage the day-to-day maintenance of your home or office space. With a focus on cleanliness, organization, and efficient assistance, we ensure that your environment remains pleasant, professional, and stress-free.</p>
+          <p className={priceClass}>Low Cost</p>
 
-          <div className="actions_wrraper">
-            <div className="actions">
-            <button className="add-to-cart"><a href="tel:7021595850">Call Now</a></button>
-            <button className="add-to-cart"><a  href="https://api.whatsapp.com/send?phone=7021595850">Contact Us</a></button>
+          <div className={actionsWrapperClass}>
+            <div className={actionsRowClass}>
+            <button className={addToCartClass}><a href="tel:7021595850">Call Now</a></button>
+            <button className={addToCartClass}><a  href="https://api.whatsapp.com/send?phone=7021595850">Contact Us</a></button>
             </div>
           </div>
-          <div className="additional-info">
+          <div className={additionalInfoClass}>
             <p>
               <strong>Free Home Visit</strong>
             </p>

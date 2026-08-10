@@ -1,4 +1,17 @@
 import React from 'react'
+import {
+  productDetailClass,
+  productImagesClass,
+  mainImageClass,
+  productInfoClass,
+  productInfoTitleClass,
+  skuClass,
+  priceClass,
+  actionsWrapperClass,
+  actionsRowClass,
+  addToCartClass,
+  additionalInfoClass,
+} from '@/app/uiClasses'
 
 export const metadata  = {
   title:"Window Cleaning Services | Streak-Free Shine by Chandelite",
@@ -8,26 +21,26 @@ export const metadata  = {
 const page = () => {
   return (
     <div>
-      <div className="product-detail">
-        <div className="product-images">
+      <div className={productDetailClass}>
+        <div className={productImagesClass}>
           <img
             src="https://res.cloudinary.com/dclgpfheh/image/upload/v1734255517/Leonardo_Phoenix_A_bright_and_airy_city_street_scene_showcasin_0_fiswhd.jpg"
             alt="Main Product Image"
-            className="main-image"
+            className={mainImageClass}
           />
         </div>
-        <div className="product-info">
-          <h1>Comprehensive Window Cleaning</h1>
-          <p className="sku">Our Comprehensive Window Cleaning Service provides an all-in-one solution to ensure your windows are crystal clear, streak-free, and well-maintained. This service covers every aspect of window cleaning, from the glass surface to frames, grills, and surrounding areas.</p>
-          <p className="price">Low Cost</p>
+        <div className={productInfoClass}>
+          <h1 className={productInfoTitleClass}>Comprehensive Window Cleaning</h1>
+          <p className={skuClass}>Our Comprehensive Window Cleaning Service provides an all-in-one solution to ensure your windows are crystal clear, streak-free, and well-maintained. This service covers every aspect of window cleaning, from the glass surface to frames, grills, and surrounding areas.</p>
+          <p className={priceClass}>Low Cost</p>
 
-          <div className="actions_wrraper">
-            <div className="actions">
-            <button className="add-to-cart"><a href="tel:7021595850">Call Now</a></button>
-            <button className="add-to-cart"><a  href="https://api.whatsapp.com/send?phone=7021595850">Contact Us</a></button>
+          <div className={actionsWrapperClass}>
+            <div className={actionsRowClass}>
+            <button className={addToCartClass}><a href="tel:7021595850">Call Now</a></button>
+            <button className={addToCartClass}><a  href="https://api.whatsapp.com/send?phone=7021595850">Contact Us</a></button>
             </div>
           </div>
-          <div className="additional-info">
+          <div className={additionalInfoClass}>
             <p>
               <strong>Free Home Visit</strong>
             </p>
@@ -40,7 +53,7 @@ const page = () => {
                   <strong>We Do </strong>
                 </summary>
                 <p>cleaning</p>
-   
+
               </details>
             </p>
             <p>
@@ -49,7 +62,7 @@ const page = () => {
           </div>
         </div>
       </div>
-     
+
     </div>
   )
 }

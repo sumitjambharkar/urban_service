@@ -5,6 +5,8 @@ export const metadata = {
   description: "Explore Chandelite's professional cleaning, painting and home services, combining eco-friendly techniques and sustainable practices to ensure spotless spaces and a healthier environment.",
 }
 
+export const revalidate = 60
+
 const page = () => {
   return <Service />
 }

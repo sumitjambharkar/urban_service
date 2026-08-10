@@ -5,18 +5,21 @@ export function middleware(request) {
 
   const publicPath = path === "/login"
 
-  const token = request.cookies.get('token')?.value || ""
+  const token = request.cookies.get('refreshToken')?.value || ""
 
   if (publicPath && token) {
-    return NextResponse.redirect(new URL('/service-upload', request.url))
+    const redirectTo = request.nextUrl.searchParams.get('redirect') || '/service-upload'
+    return NextResponse.redirect(new URL(redirectTo, request.url))
   }
   if (!publicPath&& !token) {
-    return NextResponse.redirect(new URL('/login', request.url))
+    const loginUrl = new URL('/login', request.url)
+    loginUrl.searchParams.set('redirect', path)
+    return NextResponse.redirect(loginUrl)
   }
 }
 
 
 export const config = {
-  matcher: ['/service-upload','/login','/blog-upload'
+  matcher: ['/service-upload','/login','/blog-upload','/admin','/admin/:path*'
   ]
 }
