@@ -1,39 +1,39 @@
 import React from 'react'
 export const metadata  = {
-  title:"Gym Trainers | Expert Fitness Coaching by CleanNation",
-  description:"Achieve your fitness goals with CleanNation's certified gym trainers. Our experienced professionals provide personalized workout plans and guidance to help you build strength"
+  title:"Gym Trainers | Expert Fitness Coaching by Chandelite",
+  description:"Achieve your fitness goals with Chandelite's certified gym trainers. Our experienced professionals provide personalized workout plans and guidance to help you build strength"
 }
 
 const page = () => {
   return (
     <div>
-      <div class="product-detail">
-        <div class="product-images">
+      <div className="product-detail">
+        <div className="product-images">
           <img
             src="https://res.cloudinary.com/dclgpfheh/image/upload/v1734255968/Leonardo_Phoenix_A_fit_and_energetic_male_personal_trainer_in_0_kbnxzv.jpg"
             alt="Main Product Image"
-            class="main-image"
+            className="main-image"
           />
         </div>
-        <div class="product-info">
+        <div className="product-info">
           <h1>
           Home Personal Trainer
 
 </h1>
-          <p class="sku">  Home Personal Trainer is a fitness professional who provides personalized workout sessions in the comfort of a client's home. They offer one-on-one guidance, creating customized fitness plans based on the client's goals, fitness level, and any specific needs or limitations.</p>
-          <p class="price">Low Cost</p>
-       
-          <div class="actions_wrraper">
-            <div class="actions">
-            <button class="add-to-cart"><a href="tel:9323969471">Call Now</a></button>
-            <button class="add-to-cart"><a  href="https://api.whatsapp.com/send?phone=7021595850">Contact Us</a></button> </div>
+          <p className="sku">  Home Personal Trainer is a fitness professional who provides personalized workout sessions in the comfort of a client's home. They offer one-on-one guidance, creating customized fitness plans based on the client's goals, fitness level, and any specific needs or limitations.</p>
+          <p className="price">Low Cost</p>
+
+          <div className="actions_wrraper">
+            <div className="actions">
+            <button className="add-to-cart"><a href="tel:7021595850">Call Now</a></button>
+            <button className="add-to-cart"><a  href="https://api.whatsapp.com/send?phone=7021595850">Contact Us</a></button> </div>
           </div>
-          <div class="additional-info">
+          <div className="additional-info">
             <p>
               <strong>Free Home Visit</strong>
             </p>
             <p>
-              <strong>Contact Support Number :</strong> 9323969471
+              <strong>Contact Support Number :</strong> 7021595850
             </p>
             <p>
             <details>

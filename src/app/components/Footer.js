@@ -6,15 +6,16 @@ const Footer = () => {
     <section className="footer">
         <div className="footer_section">
         <div className="footer_list">
+          <h6>Company</h6>
           <ul>
             <li>
-              <Link href="/ ">Privacy Policy</Link>
+              <Link href="/">Privacy Policy</Link>
             </li>
             <li>
-              <Link href="/ ">Terms & Conditions</Link>
+              <Link href="/">Terms &amp; Conditions</Link>
             </li>
             <li>
-              <Link href="/">Cancellation & Refund Policy</Link>
+              <Link href="/">Cancellation &amp; Refund Policy</Link>
             </li>
             <li>
               <Link href="/">Payment Method</Link>
@@ -22,32 +23,35 @@ const Footer = () => {
           </ul>
         </div>
         <div className="footer_list">
+          <h6>Support</h6>
           <ul>
             <li>
-              <Link href="/ ">FaQs</Link>
+              <Link href="/">FAQs</Link>
             </li>
             <li>
-              <Link href="/ ">Related-Websites</Link>
+              <Link href="/">Related Websites</Link>
             </li>
             <li>
-              <Link href="/ ">Career</Link>
+              <Link href="/">Career</Link>
             </li>
             <li>
-              <Link href="/ ">Review</Link>
+              <Link href="/">Review</Link>
             </li>
           </ul>
         </div>
         <div className="footer_list">
+          <h6>Follow Us</h6>
           <ul>
             <li>
-              <a target="_blank" href="https://www.facebook.com/cleannation00">
+              <a target="_blank" rel="noopener noreferrer" href="#">
                 Facebook
               </a>
             </li>
             <li>
               <a
                 target="_blank"
-                href="https://www.instagram.com/star_home_interior/"
+                rel="noopener noreferrer"
+                href="#"
               >
                 Instagram
               </a>
@@ -55,33 +59,33 @@ const Footer = () => {
             <li>
               <a
                 target="_blank"
-                href="https://www.youtube.com/@clean-nation6703"
+                rel="noopener noreferrer"
+                href="#"
               >
-                Youtube
+                YouTube
               </a>
             </li>
             <li>
-              
-            Business Listing
+              Business Listing
             </li>
           </ul>
         </div>
         <div className="footer_list">
+          <h6>Get In Touch</h6>
           <ul>
             <li>
-              Phone : <Link href="tel:+919076301717">9076301717</Link>
+              Phone: <Link href="tel:+917021595850">+91 7021595850</Link>
             </li>
             <li>
-              Phone : <Link href="tel:+919319996195">9319996195</Link>
+              Email: <Link href="mailto:support@chandelite.in">support@chandelite.in</Link>
             </li>
-            <li>____________________________</li>
-            <li>
-              C 708 crystal plaza apposite infinity mall Andheri West Mumbai Maharashtra
+            <li className="footer-address">
+              Andheri West, Mumbai, Maharashtra
             </li>
           </ul>
         </div>
         </div>
-        <h6 className="FOOTNAME">@2015_CLEANNATION_ALL OVER INDIA.</h6>
+        <h6 className="FOOTNAME">&copy; {new Date().getFullYear()} CHANDELITE &mdash; ALL OVER INDIA.</h6>
     </section>
   );
 };

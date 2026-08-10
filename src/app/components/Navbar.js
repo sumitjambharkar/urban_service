@@ -3,6 +3,8 @@ import Link from "next/link";
 import { useEffect, useState } from 'react';
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import WbIncandescentIcon from "@mui/icons-material/WbIncandescent";
+import CallIcon from "@mui/icons-material/Call";
 import config from "@/config";
 import axios from "axios";
 
@@ -51,7 +53,8 @@ function Navbar() {
         <div className="child_link_logo">
       <h1>
           <Link className="navbar-brand" href="/">
-            Clean<span>Nation</span>
+            <WbIncandescentIcon className="brand-icon" />
+            Chandelite
           </Link>
         </h1>
         </div>
@@ -71,7 +74,7 @@ function Navbar() {
          <li>
           <Link onClick={toggleDrawer} href="/blog-upload">Add Blog</Link>
         </li>
-       
+
         </>:null}
         <li>
           <Link onClick={toggleDrawer} href="/services">Service</Link>
@@ -94,16 +97,22 @@ function Navbar() {
           </Link>
         </div></li>}
       </div>
-      <ul className='mobile-support'>
-        <div style={{cursor:"pointer"}} onClick={toggleDrawer}>
-          {drawerOpen? (
-                <CloseIcon fontSize="large" /> 
-              ) : (
-                <MenuIcon  fontSize="large"/>
-              )}
+      <div className="navbar-actions">
+        <a href="tel:+917021595850" className="nav-cta">
+          <CallIcon fontSize="small" />
+          <span className="nav-cta-text">+91 7021595850</span>
+        </a>
+        <ul className='mobile-support'>
+          <div style={{cursor:"pointer"}} onClick={toggleDrawer}>
+            {drawerOpen? (
+                  <CloseIcon fontSize="large" />
+                ) : (
+                  <MenuIcon  fontSize="large"/>
+                )}
 
-        </div>
-      </ul>
+          </div>
+        </ul>
+      </div>
     </div>
   );
 }

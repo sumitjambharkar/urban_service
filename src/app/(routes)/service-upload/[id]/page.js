@@ -74,15 +74,15 @@ const Page = ({params}) => {
     e.preventDefault();
 
     try {
-      await axios.put(`${config}/api/blog/${data._id}`,{name:data.name,slug:data.slug,
+      await axios.put(`${config}/api/service/${data._id}`,{name:data.name,slug:data.slug,
         content:data.content,seoTitle:data.seoTitle,seoDescription:data.seoDescription
      });
       Swal.fire({
         title: "Good job!",
-        text: "Update Blog!",
+        text: "Update Service!",
         icon: "success"
       });
-      router.push("/blog");
+      router.push("/service");
     } catch (error) {
       console.log(error);
     }

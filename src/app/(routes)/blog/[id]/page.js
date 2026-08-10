@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from 'react';
-import styles from '../../../blog.module.css';
 import axios from 'axios';
 import config from '@/config';
 import Link from 'next/link';
@@ -27,25 +26,6 @@ const page = ({params}) => {
      
     
   return (
-  //   <section className={styles.blog_section}>
-  //   <div className={styles.blog_container}>
-  //     <div className={styles.main}>
-  //       <div className={styles.single}>
-  //       <h1>{blog.name}</h1>
-  //        <img src={blog.image} alt="" />
-  //        <div><span>{blog.category}</span></div>
-  //        <div>
-  //        <div
-  //                 dangerouslySetInnerHTML={{
-  //                   __html:blog.content,
-  //                 }}
-  //               ></div>
-  //        </div>
-  //       </div>
-        
-  //     </div>
-  //   </div>
-  // </section>
    <section className='single_post'>
    <div className='container-fluid'>
      <div className='row'>
@@ -66,28 +46,6 @@ const page = ({params}) => {
            </div>
        </div>
      </div>
-     {/* <div className='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
-     <div className='single_post_card'>
-      <div className='blog_card'>
-      <p className='blog_title'>Table of Contents</p>
-       
-       {a?(<>{a.map((doc,i)=>(
-           <div><span>{i+1}.{doc.title}</span><br/></div>
-       ))}</>):null}
-      </div>
-     </div>
-     <div className='single_post_card'>
-      <div className='blog_card'>
-      
-      </div>
-     </div>
-     <div className='single_post_card'>
-      <div className='blog_card'>
-      <p className='blog_title'>Archives</p>
-       
-      </div>
-     </div>
-     </div> */}
      </div>
    </div>
 </section>

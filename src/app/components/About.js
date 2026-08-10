@@ -1,33 +1,51 @@
 import React from 'react'
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline'
+
+const features = [
+  "Eco-friendly cleaning methods",
+  "Skilled & background-verified staff",
+  "Transparent, affordable pricing",
+  "Serving customers since 2018",
+]
 
 const About = () => {
   return (
    <>
-    <h4 className='servicetitle' >About Us</h4>
+    <h4 className='servicetitle'>About Us</h4>
     <div className='about'>
-       
       <div className='about_img'>
-        <img src="https://p.w3layouts.com/demos_new/template_demo/20-03-2021/cleanfreshly-liberty-demo_Free/1414300734/web/assets/images/ab1.jpg" alt="" />
+        <img src="https://p.w3layouts.com/demos_new/template_demo/20-03-2021/cleanfreshly-liberty-demo_Free/1414300734/web/assets/images/ab1.jpg" alt="Chandelite cleaning team at work" />
       </div>
-      <div>
       <div className="about_left">
-						<div className="title-content text-left">
-							<h3 className="hny-title">WHO WE ARE</h3>
-						</div>
-						<p className="my-3">Cleannation.In(Clean-Nation)Company Is A Professional All Service Provide In All Over India 
-            With low Cost.The Customer Is The King And We Are The Servant</p>
-			<p>Our goal has been to establish new benchmarks for quality in the cleaning services sector from the beginning. At every turn, we strive to go above and beyond what our customers expect.</p>
-
-						<p>Since we started cleaning services in 2018, we have consistently provided excellent services. Achieving quality at low cost is challenging, but we succeeded!</p>
-						<h4>Our team is comprised of skilled and dedicated professionals committed to delivering the best results.
-</h4	><p>
-Everything we do is motivated by our commitment to client satisfaction. We pay attention to our clients, ascertain their needs, and then modify our offerings to meet those needs.
-</p>
-						<div className="read">
-            <a className="btn mt-4" href="https://api.whatsapp.com/send?phone=7021595850">Get Quote</a>
-							
-						</div>
-					</div>
+        <span className="sub-title">Who We Are</span>
+        <h3 className="hny-title">Professional Cleaning, Painting &amp; Home Services</h3>
+        <p className="my-3">
+          Chandelite is a professional home services company delivering all-round
+          cleaning, painting and interior solutions across India at honest prices.
+          The customer is the king, and we are the servant.
+        </p>
+        <p>
+          Our goal has been to establish new benchmarks for quality in the home
+          services sector from the beginning. At every turn, we strive to go
+          above and beyond what our customers expect.
+        </p>
+        <p>
+          Since we started in 2018, we have consistently provided excellent
+          service. Achieving quality at a low cost is challenging, but we
+          succeeded &mdash; and our team of skilled, dedicated professionals is
+          committed to delivering the best results, every time.
+        </p>
+        <div className="about-features">
+          {features.map((feature) => (
+            <div className="about-feature" key={feature}>
+              <CheckCircleOutlineIcon />
+              <span>{feature}</span>
+            </div>
+          ))}
+        </div>
+        <div className="read">
+          <a className="btn" href="https://api.whatsapp.com/send?phone=917021595850">Get Quote</a>
+        </div>
       </div>
     </div>
    </>

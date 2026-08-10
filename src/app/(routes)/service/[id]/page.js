@@ -47,28 +47,6 @@ const page = ({params}) => {
            </div>
        </div>
      </div>
-     {/* <div className='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
-     <div className='single_post_card'>
-      <div className='blog_card'>
-      <p className='blog_title'>Table of Contents</p>
-       
-       {a?(<>{a.map((doc,i)=>(
-           <div><span>{i+1}.{doc.title}</span><br/></div>
-       ))}</>):null}
-      </div>
-     </div>
-     <div className='single_post_card'>
-      <div className='blog_card'>
-      
-      </div>
-     </div>
-     <div className='single_post_card'>
-      <div className='blog_card'>
-      <p className='blog_title'>Archives</p>
-       
-      </div>
-     </div>
-     </div> */}
      </div>
    </div>
 </section>

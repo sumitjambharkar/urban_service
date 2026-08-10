@@ -51,7 +51,7 @@ const page = () => {
               <div className="post_image_header">
                 <a
                   href="/"
-                  class="elementskit-entry-thumb"
+                  className="elementskit-entry-thumb"
                 >
                   <img
                     width="100%"
@@ -61,7 +61,7 @@ const page = () => {
                   />
                 </a>
               </div>
-              <div class="post_body ">
+              <div className="post_body ">
                 <Link href={`/service/${doc.slug}`}>
                   {doc.name}
                 </Link>

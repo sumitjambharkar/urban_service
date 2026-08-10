@@ -50,31 +50,32 @@ const Contact = () => {
   return (
     <div className="contact">
       <div className="contact_title">
+        <span className="sub-title" style={{ color: "var(--gold)" }}>Get In Touch</span>
         <h2>
-          Professional Cleaning <br />
-          Services Provider
+          Professional Home &amp; <br />
+          Chandelier Cleaning Services
         </h2>
         <p>
           We specialize in delivering high-quality cleaning solutions tailored to your needs.
         </p>
         <div className="contact_box">
           <div className="box">
-            <CallIcon style={{ color: "#f45d01" }} />
+            <CallIcon style={{ color: "var(--gold)" }} />
             <h3>Phone</h3>
             <span>
-           <a href="tel:9076301717">9076301717</a>
-          
+           <a href="tel:+917021595850">+91 7021595850</a>
+
             </span>
           </div>
           <div className="box">
-            <EmailOutlinedIcon style={{ color: "#f45d01" }} />
+            <EmailOutlinedIcon style={{ color: "var(--gold)" }} />
             <h3>Email</h3>
             <span>
-              <a href="mailto:support@cleannation.in">support@cleannation.in</a>
+              <a href="mailto:support@chandelite.in">support@chandelite.in</a>
             </span>
           </div>
           <div className="box">
-            <AccessTimeOutlinedIcon style={{ color: "#f45d01" }} />
+            <AccessTimeOutlinedIcon style={{ color: "var(--gold)" }} />
             <h3>Opening Hours</h3>
             <span>10.00 am to 08.00 pm</span>
           </div>
@@ -82,6 +83,7 @@ const Contact = () => {
       </div>
       <div className="contact_form">
         <form onSubmit={handleSubmit}>
+          <h4>Send An Enquiry</h4>
           <div className="form_group">
             <label>Full Name</label>
             <input

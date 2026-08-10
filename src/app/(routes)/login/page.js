@@ -3,6 +3,7 @@ import config from '@/config';
 import axios from 'axios';
 import React, { useState } from 'react'
 import Swal from 'sweetalert2';
+import WbIncandescentIcon from '@mui/icons-material/WbIncandescent';
 
 const page = () => {
   const [email, setEmail] = useState("")
@@ -27,7 +28,6 @@ const page = () => {
             icon: "success"
           });
           window.location.reload()
-          router.push("/")
         }
       } catch (error) {
         Swal.fire({
@@ -44,7 +44,7 @@ const page = () => {
       <div className='login'>
       <div className='login_form'>
       <form onSubmit={sendData} >
-      <h2>Login to your account</h2>
+      <h2><WbIncandescentIcon style={{color:"var(--gold)", verticalAlign:"middle", marginRight:6}} />Login to your account</h2>
         <input required  value={email} onChange={(e)=>setEmail(e.target.value)} type="email" placeholder='Email' />
         <input required  value={password} onChange={(e)=>setPassword(e.target.value)} type="password" placeholder='password' />
         <button className='btn' type='submit'>Login</button>
