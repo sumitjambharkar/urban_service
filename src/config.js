@@ -1,4 +1,4 @@
 const config = {
-  URL:"http://localhost:3000",
+  URL: process.env.NEXT_PUBLIC_URL,
 };
 export default config.URL;
