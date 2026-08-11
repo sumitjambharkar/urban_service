@@ -15,6 +15,7 @@ const serviceTileSchema = new mongoose.Schema(
         iconPublicId: String,
         href: String,
         order: Number,
+        status: String,
     },
     { timestamps: true }
 );
@@ -92,6 +93,7 @@ const run = async () => {
         await ServiceTile.create({
             ...tile,
             iconPublicId: null,
+            status: "active",
             order,
         });
         order += 1;

@@ -1,6 +1,8 @@
 import connectDatabase from "@/libs/database";
 import Blog from "@/model/Blog";
 import Service from "@/model/Service";
+import ServiceTile from "@/model/ServiceTile";
+import ServicePackage from "@/model/ServicePackage";
 import { SITE_URL } from "@/libs/seo";
 
 const staticRoutes = [
@@ -11,23 +13,17 @@ const staticRoutes = [
   { path: "/blog", priority: 0.7, changeFrequency: "weekly" },
   { path: "/gallery", priority: 0.6, changeFrequency: "monthly" },
   { path: "/contact", priority: 0.6, changeFrequency: "yearly" },
-  { path: "/chandelier-cleaning", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/home-cleaning", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/water-tank-cleaning", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/window-cleaning", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/home-interior", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/house-painting", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/gym-trainers", priority: 0.6, changeFrequency: "monthly" },
-  { path: "/house-keeping-contract", priority: 0.6, changeFrequency: "monthly" },
 ];
 
 export default async function sitemap() {
   try {
     await connectDatabase();
 
-    const [blogs, services] = await Promise.all([
+    const [blogs, services, tiles, packages] = await Promise.all([
       Blog.find().select("slug updatedAt").lean(),
       Service.find().select("slug updatedAt").lean(),
+      ServiceTile.find({ status: { $ne: "inactive" } }).select("href updatedAt").lean(),
+      ServicePackage.find({ status: { $ne: "inactive" } }).select("serviceTileId slug updatedAt").lean(),
     ]);
 
     const staticEntries = staticRoutes.map(({ path, priority, changeFrequency }) => ({
@@ -55,7 +51,27 @@ export default async function sitemap() {
         priority: 0.6,
       }));
 
-    return [...staticEntries, ...blogEntries, ...serviceEntries];
+    const tilesById = new Map(tiles.map((tile) => [tile._id.toString(), tile]));
+
+    const categoryEntries = tiles
+      .filter((tile) => tile.href)
+      .map((tile) => ({
+        url: `${SITE_URL}/${tile.href}`,
+        lastModified: tile.updatedAt ? new Date(tile.updatedAt) : new Date(),
+        changeFrequency: "monthly",
+        priority: 0.8,
+      }));
+
+    const packageEntries = packages
+      .filter((pkg) => pkg.slug && tilesById.has(pkg.serviceTileId.toString()))
+      .map((pkg) => ({
+        url: `${SITE_URL}/${tilesById.get(pkg.serviceTileId.toString()).href}/${pkg.slug}`,
+        lastModified: pkg.updatedAt ? new Date(pkg.updatedAt) : new Date(),
+        changeFrequency: "monthly",
+        priority: 0.7,
+      }));
+
+    return [...staticEntries, ...blogEntries, ...serviceEntries, ...categoryEntries, ...packageEntries];
   } catch (error) {
     console.error("Error generating sitemap:", error);
     return [{ url: SITE_URL, lastModified: new Date() }];

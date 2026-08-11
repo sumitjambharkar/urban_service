@@ -72,7 +72,7 @@ export const galleryImageClass = "h-60 w-full object-cover";
 export const galleryEmptyClass = "col-span-full py-10 text-center text-ink-soft";
 
 // Blog / service listing cards
-export const blogSectionClass = "mx-auto max-w-container px-[6vw] py-10 pb-[70px]";
+export const blogSectionClass = "mx-auto max-w-container py-10 pb-[70px]";
 export const blogHeadingClass = "mb-9 text-center text-[34px]";
 export const blogRowClass = "flex flex-wrap justify-center gap-7";
 export const postImageCardClass =
@@ -138,7 +138,7 @@ export const tabButtonActiveClass = "border-gold font-bold text-navy";
 export const tabContentClass = "mt-5 text-sm leading-[1.8] text-ink-soft";
 
 // Admin dashboard
-export const adminWrapClass = "mx-auto max-w-container px-[6vw] py-12 pb-20 max-md:px-5 max-md:py-8 max-md:pb-[60px]";
+export const adminWrapClass = "mx-auto max-w-container py-12 pb-20 max-md:px-5 max-md:py-8 max-md:pb-[60px]";
 export const adminHeaderClass = "mb-8 text-center";
 export const adminHeaderTitleClass = "mb-2 text-[30px]";
 export const adminHeaderTextClass = "text-ink-soft";
@@ -174,3 +174,16 @@ export const adminServiceCardActionsClass = "mt-2 flex items-center gap-1.5 bord
 export const adminServiceEditInputClass =
   "w-full rounded-s border border-border bg-cream px-2.5 py-1.5 text-sm outline-none transition-colors duration-200 focus:border-gold focus:bg-white";
 export const adminServiceEditLabelClass = "text-xs font-semibold text-ink-soft";
+export const adminServiceStatusBadgeClass = "rounded-full px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide";
+export const adminServiceStatusActiveClass = "bg-gold/15 text-gold-dark";
+export const adminServiceStatusInactiveClass = "bg-ink-soft/15 text-ink-soft";
+export const adminServiceManageLinkClass =
+  "rounded-s border border-border bg-cream px-3 py-1.5 text-xs font-bold text-navy no-underline transition-colors duration-200 hover:border-gold hover:bg-white";
+
+// Admin service packages manager
+export const adminPackageFormGridClass = "grid grid-cols-2 gap-3.5 max-md:grid-cols-1";
+export const adminPackageTextareaClass =
+  "w-full rounded-s border border-border bg-cream px-4 py-3.5 text-[15px] transition-colors duration-200 focus:border-gold focus:bg-white focus:outline-none";
+export const adminPackageCheckboxRowClass = "flex items-center gap-2 text-sm font-semibold text-ink-soft";
+export const adminPackageCardImgClass = "h-14 w-14 shrink-0 rounded-m object-cover";
+export const adminPackageBackLinkClass = "mb-4 inline-block text-sm font-bold text-gold-dark no-underline hover:text-navy";

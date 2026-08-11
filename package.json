@@ -9,7 +9,8 @@
     "lint": "next lint",
     "seed:admin": "node --env-file=.env.local scripts/seedAdmin.mjs",
     "seed:gallery": "node --env-file=.env.local scripts/seedGallery.mjs",
-    "seed:service-tiles": "node --env-file=.env.local scripts/seedServiceTiles.mjs"
+    "seed:service-tiles": "node --env-file=.env.local scripts/seedServiceTiles.mjs",
+    "seed:service-packages": "node --env-file=.env.local scripts/seedServicePackages.mjs"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",

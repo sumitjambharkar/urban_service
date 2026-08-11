@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useState } from "react"
+import Link from "next/link"
 import api from "@/libs/api"
 import Swal from "sweetalert2"
 import DeleteIcon from "@mui/icons-material/Delete"
@@ -30,6 +31,10 @@ import {
   adminServiceCardActionsClass,
   adminServiceEditInputClass,
   adminServiceEditLabelClass,
+  adminServiceStatusBadgeClass,
+  adminServiceStatusActiveClass,
+  adminServiceStatusInactiveClass,
+  adminServiceManageLinkClass,
 } from "@/app/uiClasses"
 
 const emptyForm = { title: "", description: "", href: "" }
@@ -130,6 +135,16 @@ const AdminServiceTilesPage = () => {
       cancelEdit()
     } catch (error) {
       Swal.fire({ title: "Update failed", icon: "error" })
+    }
+  }
+
+  const toggleStatus = async (tile) => {
+    const nextStatus = tile.status === "inactive" ? "active" : "inactive"
+    try {
+      await api.put(`/api/service-tiles/${tile._id}`, { status: nextStatus })
+      setTiles((prev) => prev.map((t) => (t._id === tile._id ? { ...t, status: nextStatus } : t)))
+    } catch (error) {
+      Swal.fire({ title: "Status update failed", icon: "error" })
     }
   }
 
@@ -256,6 +271,16 @@ const AdminServiceTilesPage = () => {
                     <p className={adminServiceCardTitleClass}>{tile.title}</p>
                     <p className={adminServiceCardHrefClass}>/{tile.href}</p>
                   </div>
+                  <button
+                    type="button"
+                    onClick={() => toggleStatus(tile)}
+                    title="Click to toggle"
+                    className={`${adminServiceStatusBadgeClass} ${
+                      tile.status === "inactive" ? adminServiceStatusInactiveClass : adminServiceStatusActiveClass
+                    }`}
+                  >
+                    {tile.status === "inactive" ? "Inactive" : "Active"}
+                  </button>
                 </div>
                 <p className={adminServiceCardDescClass}>{tile.description}</p>
                 <div className={adminServiceCardActionsClass}>
@@ -293,6 +318,9 @@ const AdminServiceTilesPage = () => {
                   >
                     <DeleteIcon fontSize="small" />
                   </button>
+                  <Link href={`/admin/service-packages/${tile._id}`} className={adminServiceManageLinkClass}>
+                    Manage Packages
+                  </Link>
                 </div>
               </>
             )}

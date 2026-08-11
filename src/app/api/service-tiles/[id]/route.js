@@ -6,6 +6,18 @@ import { getTokenData } from "@/helpers/auth";
 
 connectDatabase();
 
+export async function GET(request, { params }) {
+  try {
+    const tile = await ServiceTile.findById(params.id);
+    if (!tile) {
+      return NextResponse.json({ error: "Service tile not found" }, { status: 404 });
+    }
+    return NextResponse.json(tile);
+  } catch (error) {
+    return NextResponse.json({ error: "Failed to load service tile." }, { status: 500 });
+  }
+}
+
 export async function PUT(request, { params }) {
   try {
     getTokenData(request);
