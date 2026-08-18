@@ -25,7 +25,7 @@ const Header = () => {
           <a href="tel:+917021595850" className={infoLinkClass}>+91 7021595850</a>
         </li>
       </div>
-      <div className="flex flex-wrap items-center justify-center gap-x-2.5">
+      {/* <div className="flex flex-wrap items-center justify-center gap-x-2.5">
         <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/cleannation00" aria-label="Facebook" className="group">
           <FacebookIcon className={`${socialIconClass} group-hover:!text-gold`} />
         </a>
@@ -35,7 +35,7 @@ const Header = () => {
         <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@clean-nation6703" aria-label="YouTube" className="group">
           <YouTubeIcon className={`${socialIconClass} group-hover:!text-gold`} />
         </a>
-      </div>
+      </div> */}
     </section>
   );
 };
